@@ -461,7 +461,6 @@ module.exports = {
         "no-unused-private-class-members": "error",
         "no-unused-vars": "warn",
         "no-use-before-define": "warn",
-        "no-useless-assignment": "error",
         "no-useless-backreference": "error",
         "no-useless-call": "error",
         "no-useless-catch": "error",
