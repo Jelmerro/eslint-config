@@ -19,5 +19,12 @@
     "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
     "eslint-plugin-sort-keys": "2.3.5",
     "@stylistic/eslint-plugin": "1.7.2"
+  },
+  "overrides": {
+    "@stylistic/eslint-plugin": {
+      "@typescript-eslint/utils": {
+        "eslint": "9.1.1"
+      }
+    }
   }
 }
