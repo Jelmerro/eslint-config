@@ -1,0 +1,22 @@
+{
+  "name": "eslint-config",
+  "version": "1.0.0",
+  "description": "Jelmerro's eslint config",
+  "main": "index.js",
+  "repository": "https://github.com/Jelmerro/eslint-config",
+  "homepage": "https://github.com/Jelmerro/eslint-config",
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "author": "Jelmer van Arnhem",
+  "email": "Jelmerro@users.noreply.github.com",
+  "funding": "https://github.com/sponsors/Jelmerro/",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "9.1.1",
+    "eslint-plugin-jsdoc": "48.2.3",
+    "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
+    "eslint-plugin-sort-keys": "2.3.5"
+  }
+}
