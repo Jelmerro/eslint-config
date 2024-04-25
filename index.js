@@ -4,7 +4,7 @@ const globals = require("globals")
 const jsdoc = require("eslint-plugin-jsdoc")
 const paddingLines = require("eslint-plugin-padding-lines")
 const sortKeys = require("eslint-plugin-sort-keys")
-const stylistic = require("@stylistic/eslint-plugin")
+const stylistic = require("@stylistic/eslint-plugin-js")
 
 module.exports = {
     "ignores": [
@@ -62,27 +62,7 @@ module.exports = {
             "error",
             4
         ],
-        "@stylistic/indent-binary-ops": "error",
-        "@stylistic/jsx-child-element-spacing": "error",
-        "@stylistic/jsx-closing-bracket-location": "error",
-        "@stylistic/jsx-closing-tag-location": "error",
-        "@stylistic/jsx-curly-brace-presence": "error",
-        "@stylistic/jsx-curly-newline": "error",
-        "@stylistic/jsx-curly-spacing": "error",
-        "@stylistic/jsx-equals-spacing": "error",
-        "@stylistic/jsx-first-prop-new-line": "error",
-        "@stylistic/jsx-indent": "error",
-        "@stylistic/jsx-indent-props": "error",
-        "@stylistic/jsx-max-props-per-line": "error",
-        "@stylistic/jsx-newline": "error",
-        "@stylistic/jsx-one-expression-per-line": "error",
-        "@stylistic/jsx-pascal-case": "error",
-        "@stylistic/jsx-props-no-multi-spaces": "error",
         "@stylistic/jsx-quotes": "error",
-        "@stylistic/jsx-self-closing-comp": "error",
-        "@stylistic/jsx-sort-props": "error",
-        "@stylistic/jsx-tag-spacing": "error",
-        "@stylistic/jsx-wrap-multilines": "error",
         "@stylistic/key-spacing": "error",
         "@stylistic/keyword-spacing": "error",
         "@stylistic/linebreak-style": "error",
@@ -101,7 +81,6 @@ module.exports = {
             }
         ],
         "@stylistic/max-statements-per-line": "error",
-        "@stylistic/member-delimiter-style": "error",
         "@stylistic/multiline-ternary": "error",
         "@stylistic/new-parens": "error",
         "@stylistic/newline-per-chained-call": "error",
@@ -172,9 +151,6 @@ module.exports = {
         "@stylistic/switch-colon-spacing": "error",
         "@stylistic/template-curly-spacing": "error",
         "@stylistic/template-tag-spacing": "error",
-        "@stylistic/type-annotation-spacing": "error",
-        "@stylistic/type-generic-spacing": "error",
-        "@stylistic/type-named-tuple-spacing": "error",
         "@stylistic/wrap-iife": "error",
         "@stylistic/wrap-regex": "error",
         "@stylistic/yield-star-spacing": "error",
