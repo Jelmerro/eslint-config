@@ -7,8 +7,8 @@ const sortKeys = require("eslint-plugin-sort-keys")
 
 module.exports = {
     "ignores": [
-        "*.min.js",
-        "*.lib.js"
+        "**/*.min.js",
+        "**/*.lib.js"
     ],
     "languageOptions": {
         "globals": {
