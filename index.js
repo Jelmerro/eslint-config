@@ -511,7 +511,7 @@ module.exports = {
                 ]
             },
             {
-                "blankLine": "any",
+                "blankLine": "always",
                 "next": [
                     "export",
                     "cjs-export"
@@ -519,18 +519,7 @@ module.exports = {
                 "prev": "*"
             },
             {
-                "blankLine": "never",
-                "next": [
-                    "import",
-                    "cjs-import"
-                ],
-                "prev": [
-                    "import",
-                    "cjs-import"
-                ]
-            },
-            {
-                "blankLine": "never",
+                "blankLine": "always",
                 "next": [
                     "export",
                     "cjs-export"
