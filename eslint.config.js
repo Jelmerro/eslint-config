@@ -1,3 +1,1 @@
-"use strict"
-
-module.exports = require("./index")
+export {default} from "./index.js"

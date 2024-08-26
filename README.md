@@ -17,48 +17,25 @@ The main components are:
 The config is currently updated to eslint 9 and supports `eslint.config.js`.
 Since the config depends on eslint, you only need to install the config, not eslint itself.
 This has the advantage that the config will always use a compatible eslint version.
+Since I have mostly migrated to ESM, my eslint config uses that too.
 
-### ESM
+### Usage
 
 - `npm i -D jelmerro/eslint-config`
 - Add the following to `eslint.config.js`:
 
 ```js
 import eslintConfig from "eslint-config"
+
+export default eslintConfig
+```
+
+You are free to customize, the snippets simply serve as examples.
+
+```js
+import eslintConfig from "eslint-config"
+
 export default {
-    ...eslintConfig,
-    "languageOptions": {
-        ...eslintConfig.languageOptions,
-        "sourceType": "module"
-    },
-    "rules": {
-        ...eslintConfig.rules,
-        // add custom rules here
-    }
-}
-```
-
-In case you do not want to customize any rules, just remove the entire "rules" key.
-You are free to customize this, the above snippet simply serves as an example.
-
-### CommonJS
-
-- `npm i -D jelmerro/eslint-config`
-- Add the following to `eslint.config.js`:
-
-```js
-"use strict"
-
-module.exports = require("eslint-config")
-```
-
-In case you want to customize the rules, you can split the require and export.
-
-```js
-"use strict"
-
-const eslintConfig = require("eslint-config")
-module.exports = {
     ...eslintConfig,
     "rules": {
         ...eslintConfig.rules,

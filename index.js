@@ -1,12 +1,10 @@
-"use strict"
+import globals from "globals"
+import jsdoc from "eslint-plugin-jsdoc"
+import paddingLines from "eslint-plugin-padding-lines"
+import sortKeys from "eslint-plugin-sort-keys"
+import stylistic from "@stylistic/eslint-plugin-js"
 
-const globals = require("globals")
-const jsdoc = require("eslint-plugin-jsdoc")
-const paddingLines = require("eslint-plugin-padding-lines")
-const sortKeys = require("eslint-plugin-sort-keys")
-const stylistic = require("@stylistic/eslint-plugin-js")
-
-module.exports = {
+export default {
     "ignores": [
         "**/*.min.js",
         "**/*.lib.js"
@@ -15,8 +13,7 @@ module.exports = {
         "globals": {
             ...globals.browser,
             ...globals.node
-        },
-        "sourceType": "commonjs"
+        }
     },
     "plugins": {
         "@stylistic": stylistic,
