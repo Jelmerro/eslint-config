@@ -62,7 +62,7 @@ done
 add_rules "${jsdoc_rules[@]}"
 
 # make a list of stylistic rules
-mapfile -td $'\n' stylistic_rules_pascal_all < <(find ./node_modules/@stylistic/eslint-plugin*/rules/* -maxdepth 1 -type d | sed 's#.*/##')
+mapfile -td $'\n' stylistic_rules_pascal_all < <(find ./node_modules/@stylistic/eslint-plugin*/dist/rules/* -maxdepth 1 -type f | sed 's#.*/##' | sed 's#\..*js$##')
 mapfile -td $'\n' stylistic_rules_pascal_uniq < <(printf "%s\n" "${stylistic_rules_pascal_all[@]}" | sort -u)
 stylistic_rules=()
 for rule in "${stylistic_rules_pascal_uniq[@]}";do
