@@ -77,6 +77,7 @@ module.exports = {
         "@stylistic/max-len": [
             "error",
             {
+                "ignorePattern": ".*\"data:.*",
                 "ignoreRegExpLiterals": true,
                 "ignoreUrls": true
             }
