@@ -24,7 +24,7 @@ add_rules() {
 # check every actual rule for deprecation
 deprecated_present=("index")
 for rule in "${actual[@]}";do
-    output=$(rg "deprecated: true" "./node_modules/eslint/lib/rules/$rule.js")
+    output=$(rg "deprecatedSince: " "./node_modules/eslint/lib/rules/$rule.js")
     if [ -n "$output" ];then
         deprecated_present+=("$rule")
     fi
