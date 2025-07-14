@@ -21,6 +21,6 @@
     "eslint-plugin-jsdoc": "51.3.4",
     "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
     "eslint-plugin-sort-keys": "2.3.5",
-    "@stylistic/eslint-plugin-js": "4.4.1"
+    "@stylistic/eslint-plugin": "5.1.0"
   }
 }

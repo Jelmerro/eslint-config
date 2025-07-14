@@ -4,7 +4,7 @@ const globals = require("globals")
 const jsdoc = require("eslint-plugin-jsdoc")
 const paddingLines = require("eslint-plugin-padding-lines")
 const sortKeys = require("eslint-plugin-sort-keys")
-const stylistic = require("@stylistic/eslint-plugin-js")
+const stylistic = require("@stylistic/eslint-plugin")
 
 module.exports = {
     "ignores": [
