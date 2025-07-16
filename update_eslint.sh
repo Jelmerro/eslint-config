@@ -36,7 +36,7 @@ add_rules "${actual[@]}"
 # check the config for base eslint rules that are no longer present
 mapfile -td $'\n' old_rules < <(comm -1 -3 <(printf "%s\n" "${actual[@]}" | LC_ALL=C sort) <(printf "%s\n" "${current[@]}" | LC_ALL=C sort))
 for rule in "${old_rules[@]}";do
-    if [[ "$rule" != padding-lines/* && "$rule" != jsdoc/* && "$rule" != "sort-keys/sort-keys-fix" && "$rule" != @stylistic/* ]];then
+    if [[ "$rule" != padding-lines/* && "$rule" != jsdoc/* && "$rule" != perfectionist/* && "$rule" != @stylistic/* ]];then
         echo "$rule is no longer valid"
     fi
 done

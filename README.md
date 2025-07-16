@@ -9,9 +9,9 @@ It also combines different plugins into one easy to install repository.
 The main components are:
 
 - The main eslint config, with all the rules, see `./index.js`
-- JSDoc rules, based on [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
-- Padding line rules, based on [eslint-plugin-padding-lines](https://github.com/Jelmerro/eslint-plugin-padding-lines)
-- Sort object keys, based on [eslint-plugin-sort-keys](https://github.com/namnm/eslint-plugin-sort-keys)
+- JSDoc rules, based on [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc/)
+- Padding line rules, based on [eslint-plugin-padding-lines](https://github.com/Jelmerro/eslint-plugin-padding-lines/)
+- Sort rules, based on [eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist/)
 - Stylistic rules, based on [eslint-stylistic](https://github.com/eslint-community/eslint-stylistic/)
 
 The config is currently updated to eslint 9 and supports `eslint.config.js`.

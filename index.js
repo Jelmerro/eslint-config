@@ -1,10 +1,10 @@
 "use strict"
 
-const globals = require("globals")
+const stylistic = require("@stylistic/eslint-plugin")
 const jsdoc = require("eslint-plugin-jsdoc")
 const paddingLines = require("eslint-plugin-padding-lines")
-const sortKeys = require("eslint-plugin-sort-keys")
-const stylistic = require("@stylistic/eslint-plugin")
+const perfectionist = require("eslint-plugin-perfectionist")
+const globals = require("globals")
 
 module.exports = {
     "ignores": [
@@ -22,7 +22,7 @@ module.exports = {
         "@stylistic": stylistic,
         jsdoc,
         "padding-lines": paddingLines,
-        "sort-keys": sortKeys
+        perfectionist
     },
     "rules": {
         "@stylistic/array-bracket-newline": [
@@ -51,6 +51,7 @@ module.exports = {
         "@stylistic/comma-spacing": "error",
         "@stylistic/comma-style": "error",
         "@stylistic/computed-property-spacing": "error",
+        "@stylistic/curly-newline": "error",
         "@stylistic/dot-location": "off",
         "@stylistic/eol-last": "error",
         "@stylistic/function-call-argument-newline": "off",
@@ -62,7 +63,28 @@ module.exports = {
             "error",
             4
         ],
+        "@stylistic/indent-binary-ops": "off",
+        "@stylistic/jsx-child-element-spacing": "error",
+        "@stylistic/jsx-closing-bracket-location": "error",
+        "@stylistic/jsx-closing-tag-location": "error",
+        "@stylistic/jsx-curly-brace-presence": "error",
+        "@stylistic/jsx-curly-newline": "error",
+        "@stylistic/jsx-curly-spacing": "error",
+        "@stylistic/jsx-equals-spacing": "error",
+        "@stylistic/jsx-first-prop-new-line": "error",
+        "@stylistic/jsx-function-call-newline": "error",
+        "@stylistic/jsx-indent": "error",
+        "@stylistic/jsx-indent-props": "error",
+        "@stylistic/jsx-max-props-per-line": "error",
+        "@stylistic/jsx-newline": "error",
+        "@stylistic/jsx-one-expression-per-line": "error",
+        "@stylistic/jsx-pascal-case": "error",
+        "@stylistic/jsx-props-no-multi-spaces": "error",
         "@stylistic/jsx-quotes": "error",
+        "@stylistic/jsx-self-closing-comp": "error",
+        "@stylistic/jsx-sort-props": "error",
+        "@stylistic/jsx-tag-spacing": "error",
+        "@stylistic/jsx-wrap-multilines": "error",
         "@stylistic/key-spacing": "error",
         "@stylistic/keyword-spacing": "error",
         "@stylistic/line-comment-position": "error",
@@ -83,6 +105,7 @@ module.exports = {
             }
         ],
         "@stylistic/max-statements-per-line": "error",
+        "@stylistic/member-delimiter-style": "error",
         "@stylistic/multiline-comment-style": "off",
         "@stylistic/multiline-ternary": "error",
         "@stylistic/new-parens": "error",
@@ -154,6 +177,9 @@ module.exports = {
         "@stylistic/switch-colon-spacing": "error",
         "@stylistic/template-curly-spacing": "error",
         "@stylistic/template-tag-spacing": "error",
+        "@stylistic/type-annotation-spacing": "error",
+        "@stylistic/type-generic-spacing": "error",
+        "@stylistic/type-named-tuple-spacing": "error",
         "@stylistic/wrap-iife": "error",
         "@stylistic/wrap-regex": "off",
         "@stylistic/yield-star-spacing": "error",
@@ -536,6 +562,66 @@ module.exports = {
                 ]
             }
         ],
+        "perfectionist/sort-array-includes": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-classes": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-decorators": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-enums": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-exports": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-heritage-clauses": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-imports": [
+            "warn", {"newlinesBetween": 0, "type": "natural"}
+        ],
+        "perfectionist/sort-interfaces": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-intersection-types": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-jsx-props": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-maps": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-modules": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-named-exports": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-named-imports": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-object-types": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-objects": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-sets": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-switch-case": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-union-types": [
+            "warn", {"type": "natural"}
+        ],
+        "perfectionist/sort-variable-declarations": [
+            "warn", {"type": "natural"}
+        ],
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
         "prefer-destructuring": "error",
@@ -554,15 +640,8 @@ module.exports = {
         "require-await": "error",
         "require-unicode-regexp": "off",
         "require-yield": "error",
-        "sort-imports": "error",
+        "sort-imports": "off",
         "sort-keys": "off",
-        "sort-keys/sort-keys-fix": [
-            "warn",
-            "asc",
-            {
-                "natural": true
-            }
-        ],
         "sort-vars": "error",
         "strict": [
             "error",
