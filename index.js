@@ -73,7 +73,6 @@ module.exports = {
         "@stylistic/jsx-equals-spacing": "error",
         "@stylistic/jsx-first-prop-new-line": "error",
         "@stylistic/jsx-function-call-newline": "error",
-        "@stylistic/jsx-indent": "error",
         "@stylistic/jsx-indent-props": "error",
         "@stylistic/jsx-max-props-per-line": "error",
         "@stylistic/jsx-newline": "error",
@@ -152,7 +151,7 @@ module.exports = {
             "error",
             "double",
             {
-                "allowTemplateLiterals": true
+                "allowTemplateLiterals": "always"
             }
         ],
         "@stylistic/rest-spread-spacing": "error",
@@ -563,64 +562,125 @@ module.exports = {
             }
         ],
         "perfectionist/sort-array-includes": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-classes": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-decorators": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-enums": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-exports": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-heritage-clauses": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-imports": [
-            "warn", {"newlinesBetween": 0, "type": "natural"}
+            "warn",
+            {
+                "newlinesBetween": 0,
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-interfaces": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-intersection-types": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-jsx-props": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-maps": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-modules": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-named-exports": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-named-imports": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-object-types": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-objects": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-sets": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-switch-case": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-union-types": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "perfectionist/sort-variable-declarations": [
-            "warn", {"type": "natural"}
+            "warn",
+            {
+                "type": "natural"
+            }
         ],
         "prefer-arrow-callback": "error",
         "prefer-const": "error",

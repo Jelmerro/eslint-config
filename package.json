@@ -4,6 +4,7 @@
   "description": "Jelmerro's eslint config",
   "main": "index.js",
   "scripts": {
+    "test": "eslint",
     "update": "npx -y jelmerro/nus"
   },
   "repository": "https://github.com/Jelmerro/eslint-config",
