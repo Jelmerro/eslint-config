@@ -466,7 +466,12 @@ module.exports = {
         "no-unused-expressions": "error",
         "no-unused-labels": "error",
         "no-unused-private-class-members": "error",
-        "no-unused-vars": "warn",
+        "no-unused-vars": [
+            "warn",
+            {
+                "ignoreRestSiblings": true
+            }
+        ],
         "no-use-before-define": "warn",
         "no-useless-assignment": "off",
         "no-useless-backreference": "error",
