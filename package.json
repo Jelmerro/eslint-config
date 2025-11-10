@@ -18,10 +18,10 @@
   "funding": "https://github.com/sponsors/Jelmerro/",
   "license": "MIT",
   "dependencies": {
-    "@stylistic/eslint-plugin": "5.2.3",
-    "eslint": "9.34.0",
-    "eslint-plugin-jsdoc": "54.1.1",
+    "@stylistic/eslint-plugin": "5.5.0",
+    "eslint": "9.39.1",
+    "eslint-plugin-jsdoc": "61.1.12",
     "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
-    "eslint-plugin-perfectionist": "4.15.0"
+    "eslint-plugin-perfectionist": "4.15.1"
   }
 }
