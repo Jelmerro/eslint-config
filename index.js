@@ -54,8 +54,10 @@ module.exports = {
         "@stylistic/curly-newline": "error",
         "@stylistic/dot-location": ["error", "property"],
         "@stylistic/eol-last": "error",
+        // Does not allow a config specific enough to allow foo(<x>,<y>,\n<z>)
         "@stylistic/function-call-argument-newline": "off",
         "@stylistic/function-call-spacing": "error",
+        // Does not allow a config specific enough to allow foo(\n<x>,<y>,<z>)
         "@stylistic/function-paren-newline": "off",
         "@stylistic/generator-star-spacing": "error",
         "@stylistic/implicit-arrow-linebreak": "error",
@@ -63,6 +65,7 @@ module.exports = {
             "error",
             4
         ],
+        // Completely inconsistent formatting, no options to provide context
         "@stylistic/indent-binary-ops": "off",
         "@stylistic/jsx-child-element-spacing": "error",
         "@stylistic/jsx-closing-bracket-location": "error",
@@ -104,14 +107,17 @@ module.exports = {
         ],
         "@stylistic/max-statements-per-line": "error",
         "@stylistic/member-delimiter-style": "error",
+        // Blocked by https://github.com/eslint-stylistic/eslint-stylistic/issues/917
         "@stylistic/multiline-comment-style": "off",
         "@stylistic/multiline-ternary": "error",
         "@stylistic/new-parens": "error",
+        // Does not have options to allow chaining as much as fits per line
         "@stylistic/newline-per-chained-call": "off",
         "@stylistic/no-confusing-arrow": "error",
         "@stylistic/no-extra-parens": "error",
         "@stylistic/no-extra-semi": "error",
         "@stylistic/no-floating-decimal": "error",
+        // Mixed operators are fine and can be used together safely
         "@stylistic/no-mixed-operators": "off",
         "@stylistic/no-mixed-spaces-and-tabs": "error",
         "@stylistic/no-multi-spaces": "error",
@@ -179,6 +185,7 @@ module.exports = {
         "@stylistic/type-generic-spacing": "error",
         "@stylistic/type-named-tuple-spacing": "error",
         "@stylistic/wrap-iife": "error",
+        // Unnecessary, should be reversed as part of redundant brackets
         "@stylistic/wrap-regex": "off",
         "@stylistic/yield-star-spacing": "error",
         "accessor-pairs": [
@@ -204,9 +211,12 @@ module.exports = {
             }
         ],
         "class-methods-use-this": "error",
+        // Complexity is not something that is calculated or hard defined
         "complexity": "off",
+        // The treatUndefinedAsUnspecified option requires redundant void calls
         "consistent-return": "off",
         "consistent-this": "error",
+        // Also triggers (incorrectly?) when calling super in subclasses
         "constructor-super": "off",
         "curly": "error",
         "default-case": "error",
@@ -216,18 +226,21 @@ module.exports = {
         "eqeqeq": "error",
         "for-direction": "error",
         "func-name-matching": "error",
-        "func-names": "off",
+        "func-names": ["error", "never"],
         "func-style": "error",
         "getter-return": "error",
         "grouped-accessor-pairs": "error",
         "guard-for-in": "error",
         "id-denylist": "error",
+        // Single character names can be great inside arrow functions like map
         "id-length": "off",
         "id-match": "error",
         "init-declarations": "error",
         "jsdoc/check-access": "error",
         "jsdoc/check-alignment": "error",
+        // Examples are not essential if there is a clear description and types
         "jsdoc/check-examples": "off",
+        // Plugin has no idea about multiline objects or related indents
         "jsdoc/check-indentation": "off",
         "jsdoc/check-line-alignment": "error",
         "jsdoc/check-param-names": "error",
@@ -239,28 +252,38 @@ module.exports = {
         "jsdoc/check-values": "error",
         "jsdoc/convert-to-jsdoc-comments": "error",
         "jsdoc/empty-tags": "error",
-        "jsdoc/escape-inline-tags": "off",
+        "jsdoc/escape-inline-tags": "error",
         "jsdoc/implements-on-classes": "error",
+        // Reports false positives if used together with helpers like Partial
         "jsdoc/imports-as-dependencies": "off",
         "jsdoc/informative-docs": "error",
+        // Already controlled by the padding-lines plugin
         "jsdoc/lines-before-block": "off",
         "jsdoc/match-description": "error",
+        // Good naming cannot be automated, requires manual review
         "jsdoc/match-name": "off",
-        "jsdoc/multiline-blocks": "off",
+        "jsdoc/multiline-blocks": "error",
         "jsdoc/no-bad-blocks": "error",
         "jsdoc/no-blank-block-descriptions": "error",
         "jsdoc/no-blank-blocks": "error",
         "jsdoc/no-defaults": "error",
+        // No need, default format is quite alright combined with lint rules
         "jsdoc/no-missing-syntax": "off",
-        "jsdoc/no-multi-asterisks": "off",
+        "jsdoc/no-multi-asterisks": "error",
+        // So far all doc syntax is allowed
         "jsdoc/no-restricted-syntax": "off",
+        // Types are encouraged, therefor there is no need to prevent their use
         "jsdoc/no-types": "off",
+        // Does not take node_modules nor custom typedefs into account
         "jsdoc/no-undefined-types": "off",
+        // Inline imports are preferred to separate imports for documentation
         "jsdoc/prefer-import-tag": "off",
         "jsdoc/require-asterisk-prefix": "error",
         "jsdoc/require-description": "error",
         "jsdoc/require-description-complete-sentence": "error",
+        // Examples are not essential if there is a clear description and types
         "jsdoc/require-example": "off",
+        // A fileoverview is not required as it seems highly redundant
         "jsdoc/require-file-overview": "off",
         "jsdoc/require-hyphen-before-param-description": "error",
         "jsdoc/require-jsdoc": [
@@ -278,6 +301,7 @@ module.exports = {
             }
         ],
         "jsdoc/require-param": "error",
+        // Seems like a lot of work for now, but might be enabled in the future
         "jsdoc/require-param-description": "off",
         "jsdoc/require-param-name": "error",
         "jsdoc/require-param-type": "error",
@@ -285,10 +309,13 @@ module.exports = {
         "jsdoc/require-property-description": "error",
         "jsdoc/require-property-name": "error",
         "jsdoc/require-property-type": "error",
+        // More often than not returns are automatically typed, so no need
         "jsdoc/require-returns": "off",
         "jsdoc/require-returns-check": "error",
+        // Seems like a lot of work for now, but might be enabled in the future
         "jsdoc/require-returns-description": "off",
         "jsdoc/require-returns-type": "error",
+        // There are no required tags that aren't covered by other rules
         "jsdoc/require-tags": "off",
         "jsdoc/require-template": "error",
         "jsdoc/require-throws": "error",
@@ -296,28 +323,35 @@ module.exports = {
         "jsdoc/require-yields-check": "error",
         "jsdoc/sort-tags": "error",
         "jsdoc/tag-lines": "error",
+        // There shouldn't be any markdown nor html in the description at all
         "jsdoc/text-escaping": "off",
         "jsdoc/ts-method-signature-style": "error",
         "jsdoc/ts-no-empty-object-type": "error",
         "jsdoc/ts-no-unnecessary-template-expression": "error",
         "jsdoc/ts-prefer-function-type": "error",
+        // Still experimental and unionSpacing does not allow optional newlines
         "jsdoc/type-formatting": "off",
         "jsdoc/valid-types": "error",
         "logical-assignment-operators": "error",
+        // More classes the better if you need them, no limit required
         "max-classes-per-file": "off",
         "max-depth": "error",
+        // Seems like a lot of work for now, but might be enabled in the future
         "max-lines": "off",
+        // Seems like a lot of work for now, but might be enabled in the future
         "max-lines-per-function": "off",
         "max-nested-callbacks": "error",
         "max-params": [
             "error",
             5
         ],
+        // Complexity is not something that is calculated or hard defined
         "max-statements": "off",
-        "new-cap": "off",
+        "new-cap": "error",
         "no-alert": "error",
         "no-array-constructor": "error",
         "no-async-promise-executor": "error",
+        // There are uses when awaiting the steps is different than Promise.all
         "no-await-in-loop": "off",
         "no-bitwise": "error",
         "no-caller": "error",
@@ -338,7 +372,9 @@ module.exports = {
         "no-const-assign": "error",
         "no-constant-binary-expression": "error",
         "no-constant-condition": "error",
+        // There are cases where this is desired, and it is rarely accidental
         "no-constructor-return": "off",
+        // There are plenty of legitimate cases of continue over a few ifs
         "no-continue": "off",
         "no-control-regex": "error",
         "no-debugger": "error",
@@ -390,8 +426,10 @@ module.exports = {
         "no-labels": "error",
         "no-lone-blocks": "error",
         "no-lonely-if": "error",
+        // This can be good together with early returns or unordered loops
         "no-loop-func": "off",
         "no-loss-of-precision": "error",
+        // Overly annoying with many many false positives
         "no-magic-numbers": "off",
         "no-misleading-character-class": "error",
         "no-multi-assign": "error",
@@ -445,6 +483,7 @@ module.exports = {
             }
         ],
         "no-return-assign": "error",
+        // False positives when trying to detect/filter these in unsafe input
         "no-script-url": "off",
         "no-self-assign": "error",
         "no-self-compare": "error",
@@ -460,6 +499,7 @@ module.exports = {
         "no-unassigned-vars": "error",
         "no-undef": "error",
         "no-undef-init": "error",
+        // Both no-global-assign and no-shadow-restricted-names prevent misuse
         "no-undefined": "off",
         "no-underscore-dangle": "error",
         "no-unexpected-multiline": "error",
@@ -480,6 +520,7 @@ module.exports = {
             }
         ],
         "no-use-before-define": "warn",
+        // Known limitations are annoying and this is rarely a problem anyway
         "no-useless-assignment": "off",
         "no-useless-backreference": "error",
         "no-useless-call": "error",
@@ -698,6 +739,7 @@ module.exports = {
         "prefer-const": "error",
         "prefer-destructuring": "error",
         "prefer-exponentiation-operator": "error",
+        // Indexes are fine, no need
         "prefer-named-capture-group": "off",
         "prefer-numeric-literals": "error",
         "prefer-object-has-own": "error",
@@ -708,11 +750,15 @@ module.exports = {
         "prefer-spread": "error",
         "prefer-template": "error",
         "radix": "error",
+        // Seems like a lot of work for now, but might be enabled in the future
         "require-atomic-updates": "off",
         "require-await": "error",
+        // Changes the behavior of \w, so isn't safe yet is also rarely needed
         "require-unicode-regexp": "off",
         "require-yield": "error",
+        // Handled by perfectionist
         "sort-imports": "off",
+        // Handled by perfectionist
         "sort-keys": "off",
         "sort-vars": "error",
         "strict": [
