@@ -1,12 +1,17 @@
 "use strict"
 
+const json = require("@eslint/json").default
 const stylistic = require("@stylistic/eslint-plugin")
 const jsdoc = require("eslint-plugin-jsdoc")
+const jsonc = require("eslint-plugin-jsonc")
+const packageJson = require("eslint-plugin-package-json")
 const paddingLines = require("eslint-plugin-padding-lines")
 const perfectionist = require("eslint-plugin-perfectionist")
+const {defineConfig} = require("eslint/config")
 const globals = require("globals")
 
-module.exports = {
+module.exports = defineConfig([{
+    "files": ["**/*.{js,jsx,mjs,cjs}"],
     "ignores": [
         "**/*.min.js",
         "**/*.lib.js"
@@ -777,4 +782,113 @@ module.exports = {
             "mode": "typescript"
         }
     }
-}
+},
+{
+    "files": ["**/*.json"],
+    "ignores": [
+        "**/package-lock.json",
+        "**/package.json"
+    ],
+    "language": "json/json",
+    "plugins": {
+        json,
+        jsonc
+    },
+    "rules": {
+        "json/no-duplicate-keys": "error",
+        "json/no-empty-keys": "error",
+        "json/no-unnormalized-keys": "error",
+        "json/no-unsafe-values": "error",
+        // Also implemented by jsonc
+        "json/sort-keys": "off",
+        "json/top-level-interop": "error",
+        "jsonc/array-bracket-newline": "error",
+        "jsonc/array-bracket-spacing": "error",
+        "jsonc/array-element-newline": "error",
+        "jsonc/auto": "error",
+        "jsonc/comma-dangle": "error",
+        "jsonc/comma-style": "error",
+        "jsonc/indent": "error",
+        "jsonc/key-name-casing": "error",
+        "jsonc/key-spacing": "error",
+        "jsonc/no-bigint-literals": "error",
+        "jsonc/no-binary-expression": "error",
+        "jsonc/no-binary-numeric-literals": "error",
+        "jsonc/no-comments": "error",
+        "jsonc/no-dupe-keys": "error",
+        "jsonc/no-escape-sequence-in-identifier": "error",
+        "jsonc/no-floating-decimal": "error",
+        "jsonc/no-hexadecimal-numeric-literals": "error",
+        "jsonc/no-infinity": "error",
+        "jsonc/no-irregular-whitespace": "error",
+        "jsonc/no-multi-str": "error",
+        "jsonc/no-nan": "error",
+        "jsonc/no-number-props": "error",
+        "jsonc/no-numeric-separators": "error",
+        "jsonc/no-octal": "error",
+        "jsonc/no-octal-escape": "error",
+        "jsonc/no-octal-numeric-literals": "error",
+        "jsonc/no-parenthesized": "error",
+        "jsonc/no-plus-sign": "error",
+        "jsonc/no-regexp-literals": "error",
+        "jsonc/no-sparse-arrays": "error",
+        "jsonc/no-template-literals": "error",
+        "jsonc/no-undefined-value": "error",
+        "jsonc/no-unicode-codepoint-escapes": "error",
+        "jsonc/no-useless-escape": "error",
+        "jsonc/object-curly-newline": "error",
+        "jsonc/object-curly-spacing": "error",
+        "jsonc/object-property-newline": "error",
+        "jsonc/quote-props": "error",
+        "jsonc/quotes": "error",
+        "jsonc/sort-keys": "error",
+        "jsonc/space-unary-ops": "error",
+        "jsonc/valid-json-number": "error",
+        "jsonc/vue-custom-block/no-parsing-error": "error"
+    }
+},
+{
+    "files": ["**/package.json"],
+    "languageOptions": {
+        "parser": packageJson.configs.recommended.languageOptions.parser
+    },
+    "plugins": {
+        jsonc,
+        "package-json": packageJson
+    },
+    "rules": {
+        "jsonc/indent": "error",
+        "package-json/no-empty-fields": "error",
+        "package-json/no-redundant-files": "error",
+        "package-json/no-redundant-publishConfig": "error",
+        "package-json/order-properties": "error",
+        // Shorthand isn't good, but plain urls are reported as such by this
+        "package-json/repository-shorthand": "off",
+        "package-json/require-description": "error",
+        "package-json/require-license": "error",
+        "package-json/require-name": "error",
+        "package-json/require-type": "error",
+        "package-json/require-version": "error",
+        "package-json/sort-collections": "error",
+        "package-json/unique-dependencies": "error",
+        "package-json/valid-author": "error",
+        "package-json/valid-bin": "error",
+        "package-json/valid-bundleDependencies": "error",
+        "package-json/valid-config": "error",
+        "package-json/valid-cpu": "error",
+        "package-json/valid-dependencies": "error",
+        "package-json/valid-description": "error",
+        "package-json/valid-devDependencies": "error",
+        "package-json/valid-directories": "error",
+        "package-json/valid-exports": "error",
+        "package-json/valid-license": "error",
+        "package-json/valid-name": "error",
+        "package-json/valid-optionalDependencies": "error",
+        "package-json/valid-package-definition": "error",
+        "package-json/valid-peerDependencies": "error",
+        "package-json/valid-repository-directory": "error",
+        "package-json/valid-scripts": "error",
+        "package-json/valid-type": "error",
+        "package-json/valid-version": "error"
+    }
+}])

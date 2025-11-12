@@ -1,27 +1,33 @@
 {
-  "name": "eslint-config",
-  "version": "1.0.0",
-  "description": "Jelmerro's eslint config",
-  "main": "index.js",
-  "scripts": {
-    "test": "eslint",
-    "update": "npx -y jelmerro/nus"
-  },
-  "repository": "https://github.com/Jelmerro/eslint-config",
-  "homepage": "https://github.com/Jelmerro/eslint-config",
-  "keywords": [
-    "eslint",
-    "eslint-config"
-  ],
-  "author": "Jelmer van Arnhem",
-  "email": "Jelmerro@users.noreply.github.com",
-  "funding": "https://github.com/sponsors/Jelmerro/",
-  "license": "MIT",
-  "dependencies": {
-    "@stylistic/eslint-plugin": "5.5.0",
-    "eslint": "9.39.1",
-    "eslint-plugin-jsdoc": "61.1.12",
-    "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
-    "eslint-plugin-perfectionist": "4.15.1"
-  }
+    "name": "eslint-config",
+    "version": "0.1.0",
+    "description": "Jelmerro's eslint config",
+    "keywords": [
+        "eslint",
+        "eslint-config"
+    ],
+    "homepage": "https://github.com/Jelmerro/eslint-config",
+    "repository": {
+        "url": "https://github.com/Jelmerro/eslint-config",
+        "type": "git"
+    },
+    "funding": "https://github.com/sponsors/Jelmerro/",
+    "license": "MIT",
+    "author": "Jelmer van Arnhem",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "eslint",
+        "update": "npx -y jelmerro/nus"
+    },
+    "dependencies": {
+        "@eslint/json": "0.14.0",
+        "@stylistic/eslint-plugin": "5.5.0",
+        "eslint": "9.39.1",
+        "eslint-plugin-jsdoc": "61.2.0",
+        "eslint-plugin-jsonc": "2.21.0",
+        "eslint-plugin-package-json": "0.69.0",
+        "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
+        "eslint-plugin-perfectionist": "4.15.1"
+    }
 }
