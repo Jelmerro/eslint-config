@@ -17,17 +17,23 @@
     "type": "commonjs",
     "main": "index.js",
     "scripts": {
-        "test": "eslint",
+        "eslint": "eslint",
+        "fix": "eslint --fix",
+        "lint": "npm run eslint && npm run tsc",
+        "tsc": "tsc",
         "update": "npx -y jelmerro/nus"
     },
     "dependencies": {
         "@eslint/json": "0.14.0",
         "@stylistic/eslint-plugin": "5.5.0",
         "eslint": "9.39.1",
-        "eslint-plugin-jsdoc": "61.2.0",
+        "eslint-plugin-jsdoc": "61.2.1",
         "eslint-plugin-jsonc": "2.21.0",
-        "eslint-plugin-package-json": "0.69.0",
+        "eslint-plugin-package-json": "0.74.0",
         "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
         "eslint-plugin-perfectionist": "4.15.1"
+    },
+    "devDependencies": {
+        "type-config": "github:Jelmerro/type-config"
     }
 }
