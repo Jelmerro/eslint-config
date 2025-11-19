@@ -1,7 +1,9 @@
 eslint-config
 =============
 
-### Jelmerro's eslint config
+Jelmerro's eslint config
+
+## Features
 
 This is my personal eslint config that I aim to use for all my projects in the future.
 It contains a very large number of rules that are enabled, many with custom config.
@@ -20,22 +22,21 @@ The config is currently updated to eslint 9 and supports `eslint.config.js`.
 Since the config depends on eslint, you only need to install the config, not eslint itself.
 This has the advantage that the config will always use a compatible eslint version.
 
+## Install
+
 ### ESM
 
 - `npm i -D jelmerro/eslint-config`
 - Add the following to `eslint.config.js`:
 
 ```js
-import eslintConfig from "eslint-config"
-eslintConfig[0].languageOptions.sourceType = "module"
-export default eslintConfig
+export {default} from "eslint-config"
 ```
 
 In case you want to customize any rules, you can do so with:
 
 ```js
 import eslintConfig from "eslint-config"
-eslintConfig[0].languageOptions.sourceType = "module"
 eslintConfig[0].rules["example-rule"] = "error"
 export default eslintConfig
 ```
@@ -49,19 +50,22 @@ You are free to customize this, the above snippets simply serve as examples.
 
 ```js
 "use strict"
-module.exports = require("eslint-config")
-```
-
-In case you want to customize the rules, you can split the require and export:
-
-```js
-"use strict"
-const eslintConfig = require("eslint-config")
-eslintConfig[0].rules["example-rule"] = "error"
+const eslintConfig = require("eslint-config").default
+eslintConfig[0].languageOptions.sourceType = "commonjs"
 module.exports = eslintConfig
 ```
 
-### Rationale
+Customizing rules works the same as for ESM, simply edit `eslintConfig[0].rules`.
+
+## Contribute
+
+You can support my work on [ko-fi](https://ko-fi.com/Jelmerro) or [Github sponsors](https://github.com/sponsors/Jelmerro).
+Another way to help is to report issues or suggest new features.
+Please try to follow the linter styling when developing, see `npm run lint`.
+For an example vimrc that can auto-format based on the included linters,
+you can check out my personal [vimrc](https://github.com/Jelmerro/vimrc).
+
+## Rationale
 
 I have been using my own custom config since 2018 and it has grown in size a lot since.
 As such, in 2024 it seemed about time to standardize my config for all projects.

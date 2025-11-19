@@ -1,16 +1,14 @@
-"use strict"
+import json from "@eslint/json"
+import stylistic from "@stylistic/eslint-plugin"
+import jsdoc from "eslint-plugin-jsdoc"
+import jsonc from "eslint-plugin-jsonc"
+import packageJson from "eslint-plugin-package-json"
+import paddingLines from "eslint-plugin-padding-lines"
+import perfectionist from "eslint-plugin-perfectionist"
+import {defineConfig} from "eslint/config"
+import globals from "globals"
 
-const json = require("@eslint/json").default
-const stylistic = require("@stylistic/eslint-plugin")
-const jsdoc = require("eslint-plugin-jsdoc")
-const jsonc = require("eslint-plugin-jsonc")
-const packageJson = require("eslint-plugin-package-json")
-const paddingLines = require("eslint-plugin-padding-lines")
-const perfectionist = require("eslint-plugin-perfectionist")
-const {defineConfig} = require("eslint/config")
-const globals = require("globals")
-
-module.exports = defineConfig([{
+export default defineConfig([{
     "files": ["**/*.{js,jsx,mjs,cjs}"],
     "ignores": [
         "**/*.min.js",
@@ -21,7 +19,7 @@ module.exports = defineConfig([{
             ...globals.browser,
             ...globals.node
         },
-        "sourceType": "commonjs"
+        "sourceType": "module"
     },
     "plugins": {
         "@stylistic": stylistic,

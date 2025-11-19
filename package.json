@@ -14,7 +14,7 @@
     "funding": "https://github.com/sponsors/Jelmerro/",
     "license": "MIT",
     "author": "Jelmer van Arnhem",
-    "type": "commonjs",
+    "type": "module",
     "main": "index.js",
     "scripts": {
         "eslint": "eslint",
@@ -25,11 +25,11 @@
     },
     "dependencies": {
         "@eslint/json": "0.14.0",
-        "@stylistic/eslint-plugin": "5.5.0",
+        "@stylistic/eslint-plugin": "5.6.1",
         "eslint": "9.39.1",
-        "eslint-plugin-jsdoc": "61.2.1",
+        "eslint-plugin-jsdoc": "61.3.0",
         "eslint-plugin-jsonc": "2.21.0",
-        "eslint-plugin-package-json": "0.74.0",
+        "eslint-plugin-package-json": "0.85.0",
         "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
         "eslint-plugin-perfectionist": "4.15.1"
     },
