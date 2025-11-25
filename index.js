@@ -2,6 +2,7 @@ import json from "@eslint/json"
 import stylistic from "@stylistic/eslint-plugin"
 import jsdoc from "eslint-plugin-jsdoc"
 import jsonc from "eslint-plugin-jsonc"
+import n from "eslint-plugin-n"
 import packageJson from "eslint-plugin-package-json"
 import paddingLines from "eslint-plugin-padding-lines"
 import perfectionist from "eslint-plugin-perfectionist"
@@ -24,6 +25,7 @@ export default defineConfig([{
     "plugins": {
         "@stylistic": stylistic,
         jsdoc,
+        n,
         "padding-lines": paddingLines,
         perfectionist
     },
@@ -350,6 +352,63 @@ export default defineConfig([{
         ],
         // Complexity is not something that is calculated or hard defined
         "max-statements": "off",
+        // Too many false positives, would be nice to have, but annoying.
+        "n/callback-return": "off",
+        "n/exports-style": "error",
+        "n/file-extension-in-import": "error",
+        "n/global-require": "error",
+        "n/handle-callback-err": "error",
+        "n/hashbang": "error",
+        // Seems not very useful to enforce this pattern for now, ignoring.
+        "n/no-callback-literal": "off",
+        "n/no-deprecated-api": "error",
+        "n/no-exports-assign": "error",
+        "n/no-extraneous-import": "error",
+        "n/no-extraneous-require": "error",
+        "n/no-missing-import": "error",
+        "n/no-missing-require": "error",
+        "n/no-mixed-requires": "error",
+        "n/no-new-require": "error",
+        "n/no-path-concat": "error",
+        // The ENV can be a good way to allow config of programs, so allow it.
+        "n/no-process-env": "off",
+        // Exiting with process.exit is fine for now, ignoring.
+        "n/no-process-exit": "off",
+        "n/no-restricted-import": "error",
+        "n/no-restricted-require": "error",
+        // Sync methods are fine for now, ignoring.
+        "n/no-sync": "off",
+        "n/no-top-level-await": [
+            "error",
+            {
+                "ignoreBin": true
+            }
+        ],
+        "n/no-unpublished-bin": "error",
+        // Unpublished imports are good, as packages on Github are also fine.
+        "n/no-unpublished-import": "off",
+        // Unpublished requires are good, as packages on Github are also fine.
+        "n/no-unpublished-require": "off",
+        "n/no-unsupported-features/es-builtins": "error",
+        "n/no-unsupported-features/es-syntax": "error",
+        "n/no-unsupported-features/node-builtins": [
+            "warn",
+            {
+                "allowExperimental": true
+            }
+        ],
+        "n/prefer-global/buffer": "error",
+        "n/prefer-global/console": "error",
+        "n/prefer-global/process": "error",
+        "n/prefer-global/text-decoder": "error",
+        "n/prefer-global/text-encoder": "error",
+        "n/prefer-global/url": "error",
+        "n/prefer-global/url-search-params": "error",
+        "n/prefer-node-protocol": "error",
+        "n/prefer-promises/dns": "error",
+        // Promises are great, but not yet for the fs module, maybe later.
+        "n/prefer-promises/fs": "off",
+        "n/process-exit-as-throw": "error",
         "new-cap": "error",
         "no-alert": "error",
         "no-array-constructor": "error",
