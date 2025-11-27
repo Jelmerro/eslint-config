@@ -6,6 +6,7 @@ import n from "eslint-plugin-n"
 import packageJson from "eslint-plugin-package-json"
 import paddingLines from "eslint-plugin-padding-lines"
 import perfectionist from "eslint-plugin-perfectionist"
+import unicorn from "eslint-plugin-unicorn"
 import {defineConfig} from "eslint/config"
 import globals from "globals"
 
@@ -27,7 +28,8 @@ export default defineConfig([{
         jsdoc,
         n,
         "padding-lines": paddingLines,
-        perfectionist
+        perfectionist,
+        unicorn
     },
     "rules": {
         "@stylistic/array-bracket-newline": [
@@ -392,7 +394,7 @@ export default defineConfig([{
         "n/no-unsupported-features/es-builtins": "error",
         "n/no-unsupported-features/es-syntax": "error",
         "n/no-unsupported-features/node-builtins": [
-            "warn",
+            "error",
             {
                 "allowExperimental": true
             }
@@ -496,7 +498,8 @@ export default defineConfig([{
         "no-misleading-character-class": "error",
         "no-multi-assign": "error",
         "no-multi-str": "error",
-        "no-negated-condition": "error",
+        // Already part of the unicorn plugin.
+        "no-negated-condition": "off",
         "no-nested-ternary": "error",
         "no-new-func": "error",
         "no-new-native-nonconstructor": "error",
@@ -677,122 +680,122 @@ export default defineConfig([{
             }
         ],
         "perfectionist/sort-array-includes": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-classes": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-decorators": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-enums": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-exports": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-heritage-clauses": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-imports": [
-            "warn",
+            "error",
             {
                 "newlinesBetween": 0,
                 "type": "natural"
             }
         ],
         "perfectionist/sort-interfaces": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-intersection-types": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-jsx-props": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-maps": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-modules": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-named-exports": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-named-imports": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-object-types": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-objects": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-sets": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-switch-case": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-union-types": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
         ],
         "perfectionist/sort-variable-declarations": [
-            "warn",
+            "error",
             {
                 "type": "natural"
             }
@@ -829,6 +832,169 @@ export default defineConfig([{
         ],
         "symbol-description": "error",
         "unicode-bom": "error",
+        "unicorn/better-regex": "error",
+        "unicorn/catch-error-name": "error",
+        "unicorn/consistent-assert": "error",
+        "unicorn/consistent-date-clone": "error",
+        "unicorn/consistent-destructuring": "error",
+        "unicorn/consistent-empty-array-spread": "error",
+        "unicorn/consistent-existence-index-check": "error",
+        "unicorn/consistent-function-scoping": "error",
+        "unicorn/custom-error-definition": "error",
+        "unicorn/empty-brace-spaces": "error",
+        "unicorn/error-message": "error",
+        "unicorn/escape-case": ["error", "lowercase"],
+        "unicorn/expiring-todo-comments": "error",
+        "unicorn/explicit-length-check": "error",
+        "unicorn/filename-case": "error",
+        // It seems better to decide case by case which import style is better.
+        "unicorn/import-style": "off",
+        "unicorn/new-for-builtins": "error",
+        "unicorn/no-abusive-eslint-disable": "error",
+        "unicorn/no-accessor-recursion": "error",
+        "unicorn/no-anonymous-default-export": "error",
+        // This can be guarded for perfectly fine with types.
+        "unicorn/no-array-callback-reference": "off",
+        "unicorn/no-array-for-each": "error",
+        "unicorn/no-array-method-this-argument": "error",
+        "unicorn/no-array-reduce": "error",
+        "unicorn/no-array-reverse": "error",
+        "unicorn/no-array-sort": "error",
+        "unicorn/no-await-expression-member": "error",
+        "unicorn/no-await-in-promise-methods": "error",
+        "unicorn/no-console-spaces": "error",
+        "unicorn/no-document-cookie": "error",
+        "unicorn/no-empty-file": "error",
+        "unicorn/no-for-loop": "error",
+        "unicorn/no-hex-escape": "error",
+        "unicorn/no-immediate-mutation": "error",
+        "unicorn/no-instanceof-builtins": "error",
+        "unicorn/no-invalid-fetch-options": "error",
+        "unicorn/no-invalid-remove-event-listener": "error",
+        // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1639
+        "unicorn/no-keyword-prefix": "off",
+        "unicorn/no-lonely-if": "error",
+        "unicorn/no-magic-array-flat-depth": "error",
+        "unicorn/no-named-default": "error",
+        "unicorn/no-negated-condition": "error",
+        "unicorn/no-negation-in-equality-check": "error",
+        // Already part of core eslint.
+        "unicorn/no-nested-ternary": "off",
+        "unicorn/no-new-array": "error",
+        "unicorn/no-new-buffer": "error",
+        // Null/undefined should do the same, but no need to ban either for now.
+        "unicorn/no-null": "off",
+        "unicorn/no-object-as-default-parameter": "error",
+        // Exiting with process.exit is fine for now, ignoring.
+        "unicorn/no-process-exit": "off",
+        "unicorn/no-single-promise-in-promise-methods": "error",
+        "unicorn/no-static-only-class": "error",
+        "unicorn/no-thenable": "error",
+        "unicorn/no-this-assignment": "error",
+        "unicorn/no-typeof-undefined": "error",
+        "unicorn/no-unnecessary-array-flat-depth": "error",
+        "unicorn/no-unnecessary-array-splice-count": "error",
+        "unicorn/no-unnecessary-await": "error",
+        "unicorn/no-unnecessary-polyfills": "error",
+        "unicorn/no-unnecessary-slice-end": "error",
+        // While readability counts, this syntax does not need a flat out ban.
+        "unicorn/no-unreadable-array-destructuring": "off",
+        "unicorn/no-unreadable-iife": "error",
+        "unicorn/no-unused-properties": "error",
+        "unicorn/no-useless-collection-argument": "error",
+        "unicorn/no-useless-error-capture-stack-trace": "error",
+        "unicorn/no-useless-fallback-in-spread": "error",
+        "unicorn/no-useless-length-check": "error",
+        "unicorn/no-useless-promise-resolve-reject": "error",
+        "unicorn/no-useless-spread": "error",
+        "unicorn/no-useless-switch-case": "error",
+        "unicorn/no-useless-undefined": "error",
+        "unicorn/no-zero-fractions": "error",
+        "unicorn/number-literal-case": "error",
+        // This does very little for readability and can be confusing to some.
+        "unicorn/numeric-separators-style": "off",
+        "unicorn/prefer-add-event-listener": "error",
+        "unicorn/prefer-array-find": "error",
+        "unicorn/prefer-array-flat": "error",
+        "unicorn/prefer-array-flat-map": "error",
+        "unicorn/prefer-array-index-of": "error",
+        "unicorn/prefer-array-some": "error",
+        "unicorn/prefer-at": "error",
+        "unicorn/prefer-bigint-literals": "error",
+        "unicorn/prefer-blob-reading-methods": "error",
+        "unicorn/prefer-class-fields": "error",
+        "unicorn/prefer-classlist-toggle": "error",
+        "unicorn/prefer-code-point": "error",
+        "unicorn/prefer-date-now": "error",
+        "unicorn/prefer-default-parameters": "error",
+        "unicorn/prefer-dom-node-append": "error",
+        "unicorn/prefer-dom-node-dataset": "error",
+        "unicorn/prefer-dom-node-remove": "error",
+        "unicorn/prefer-dom-node-text-content": "error",
+        "unicorn/prefer-event-target": "error",
+        "unicorn/prefer-export-from": "error",
+        "unicorn/prefer-global-this": "error",
+        "unicorn/prefer-import-meta-properties": "error",
+        "unicorn/prefer-includes": "error",
+        "unicorn/prefer-json-parse-buffer": "error",
+        "unicorn/prefer-keyboard-event-key": "error",
+        "unicorn/prefer-logical-operator-over-ternary": "error",
+        "unicorn/prefer-math-min-max": "error",
+        "unicorn/prefer-math-trunc": "error",
+        "unicorn/prefer-modern-dom-apis": "error",
+        "unicorn/prefer-modern-math-apis": "error",
+        "unicorn/prefer-module": "error",
+        "unicorn/prefer-native-coercion-functions": "error",
+        "unicorn/prefer-negative-index": "error",
+        "unicorn/prefer-node-protocol": "error",
+        "unicorn/prefer-number-properties": "error",
+        "unicorn/prefer-object-from-entries": "error",
+        "unicorn/prefer-optional-catch-binding": "error",
+        "unicorn/prefer-prototype-methods": "error",
+        // Query selector is much slower than any other selector.
+        "unicorn/prefer-query-selector": "off",
+        "unicorn/prefer-reflect-apply": "error",
+        "unicorn/prefer-regexp-test": "error",
+        "unicorn/prefer-response-static-json": "error",
+        "unicorn/prefer-set-has": "error",
+        "unicorn/prefer-set-size": "error",
+        "unicorn/prefer-single-call": "error",
+        "unicorn/prefer-spread": "error",
+        "unicorn/prefer-string-raw": "error",
+        // Also wants to use replaceAll with regex, confusing and redundant.
+        "unicorn/prefer-string-replace-all": "off",
+        "unicorn/prefer-string-slice": "error",
+        "unicorn/prefer-string-starts-ends-with": "error",
+        "unicorn/prefer-string-trim-start-end": "error",
+        // JSON.parse(JSON.stringify()) is much faster than structuredClone.
+        "unicorn/prefer-structured-clone": "off",
+        // Switches are not readable, end of story.
+        "unicorn/prefer-switch": "off",
+        // Leaving it off for now as ternaries are disabled.
+        "unicorn/prefer-ternary": "off",
+        "unicorn/prefer-top-level-await": "error",
+        "unicorn/prefer-type-error": "error",
+        // A lot of common abbreviations are also blocked with this on.
+        "unicorn/prevent-abbreviations": "off",
+        "unicorn/relative-url-style": "error",
+        "unicorn/require-array-join-separator": "error",
+        "unicorn/require-module-attributes": "error",
+        "unicorn/require-module-specifiers": "error",
+        "unicorn/require-number-to-fixed-digits-argument": "error",
+        "unicorn/require-post-message-target-origin": "error",
+        "unicorn/string-content": [
+            "error",
+            {
+                "patterns": {
+                    // eslint-disable-next-line unicorn/string-content
+                    "–": "-", "‘": "'", "’": "'"
+                }
+            }
+        ],
+        "unicorn/switch-case-braces": "error",
+        "unicorn/template-indent": "error",
+        "unicorn/text-encoding-identifier-case": "error",
+        "unicorn/throw-new-error": "error",
         "use-isnan": "error",
         "valid-typeof": "error",
         "vars-on-top": "error",
