@@ -31,6 +31,16 @@ const getAllRules = async() => {
         }))
         allRules.push(...packageRules)
     }
+    const {builtinRules} = await import("eslint/use-at-your-own-risk")
+    for (const ruleName of builtinRules.keys()) {
+        allRules.push({
+            "deprecated": !!builtinRules.get(ruleName).meta.deprecated,
+            "name": ruleName,
+            "package": "eslint",
+            "prefix": "",
+            "rule": ruleName
+        })
+    }
     return allRules
 }
 

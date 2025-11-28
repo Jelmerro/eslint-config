@@ -507,6 +507,8 @@ export default defineConfig([{
         // Already part of the unicorn plugin.
         "no-negated-condition": "off",
         "no-nested-ternary": "error",
+        // False positives for RegExp calls, so leaving disabled.
+        "no-new": "off",
         "no-new-func": "error",
         "no-new-native-nonconstructor": "error",
         "no-new-wrappers": "error",
@@ -820,6 +822,7 @@ export default defineConfig([{
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
+        "preserve-caught-error": "error",
         "radix": "error",
         // Seems like a lot of work for now, but might be enabled in the future
         "require-atomic-updates": "off",
