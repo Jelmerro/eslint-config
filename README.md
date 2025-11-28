@@ -18,6 +18,7 @@ The main components are:
 - JSON rules, based on [@eslint/json](https://github.com/eslint/json/) and [eslint-plugin-jsonc](https://github.com/ota-meshi/eslint-plugin-jsonc/)
 - Package.json rules, based on [eslint-plugin-package-json](https://github.com/JoshuaKGoldberg/eslint-plugin-package-json/)
 - Node.js rules, based on [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n/)
+- Misc gotchas and guidelines, based on [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/)
 
 The config is currently updated to eslint 9 and supports `eslint.config.js`.
 Since the config depends on eslint, you only need to install the config, not eslint itself.

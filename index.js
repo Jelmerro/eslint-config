@@ -285,6 +285,8 @@ export default defineConfig([{
         "jsdoc/no-undefined-types": "off",
         // Inline imports are preferred to separate imports for documentation
         "jsdoc/prefer-import-tag": "off",
+        "jsdoc/reject-any-type": "error",
+        "jsdoc/reject-function-type": "error",
         "jsdoc/require-asterisk-prefix": "error",
         "jsdoc/require-description": "error",
         "jsdoc/require-description-complete-sentence": "error",
@@ -307,6 +309,8 @@ export default defineConfig([{
                 }
             }
         ],
+        "jsdoc/require-next-description": "error",
+        "jsdoc/require-next-type": "error",
         "jsdoc/require-param": "error",
         // Seems like a lot of work for now, but might be enabled in the future
         "jsdoc/require-param-description": "off",
@@ -316,6 +320,7 @@ export default defineConfig([{
         "jsdoc/require-property-description": "error",
         "jsdoc/require-property-name": "error",
         "jsdoc/require-property-type": "error",
+        "jsdoc/require-rejects": "error",
         // More often than not returns are automatically typed, so no need
         "jsdoc/require-returns": "off",
         "jsdoc/require-returns-check": "error",
@@ -325,9 +330,14 @@ export default defineConfig([{
         // There are no required tags that aren't covered by other rules
         "jsdoc/require-tags": "off",
         "jsdoc/require-template": "error",
+        "jsdoc/require-template-description": "error",
         "jsdoc/require-throws": "error",
+        "jsdoc/require-throws-description": "error",
+        "jsdoc/require-throws-type": "error",
         "jsdoc/require-yields": "error",
         "jsdoc/require-yields-check": "error",
+        "jsdoc/require-yields-description": "error",
+        "jsdoc/require-yields-type": "error",
         "jsdoc/sort-tags": "error",
         "jsdoc/tag-lines": "error",
         // There shouldn't be any markdown nor html in the description at all
@@ -380,12 +390,8 @@ export default defineConfig([{
         "n/no-restricted-require": "error",
         // Sync methods are fine for now, ignoring.
         "n/no-sync": "off",
-        "n/no-top-level-await": [
-            "error",
-            {
-                "ignoreBin": true
-            }
-        ],
+        // Compatibility is already checked for with rules, so not a concern.
+        "n/no-top-level-await": "off",
         "n/no-unpublished-bin": "error",
         // Unpublished imports are good, as packages on Github are also fine.
         "n/no-unpublished-import": "off",
@@ -1064,6 +1070,13 @@ export default defineConfig([{
         "jsonc/object-property-newline": "error",
         "jsonc/quote-props": "error",
         "jsonc/quotes": "error",
+        "jsonc/sort-array-values": [
+            "error",
+            {
+                "order": {"type": "asc"},
+                "pathPattern": ".*"
+            }
+        ],
         "jsonc/sort-keys": "error",
         "jsonc/space-unary-ops": "error",
         "jsonc/valid-json-number": "error",
@@ -1081,37 +1094,82 @@ export default defineConfig([{
     },
     "rules": {
         "jsonc/indent": "error",
+        "package-json/bin-name-casing": "error",
+        "package-json/exports-subpaths-style": [
+            "error",
+            {
+                "prefer": "implicit"
+            }
+        ],
         "package-json/no-empty-fields": "error",
         "package-json/no-redundant-files": "error",
         "package-json/no-redundant-publishConfig": "error",
         "package-json/order-properties": "error",
         // Shorthand isn't good, but plain urls are reported as such by this
         "package-json/repository-shorthand": "off",
+        "package-json/require-attribution": "error",
+        "package-json/require-author": "error",
+        "package-json/require-bugs": "error",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-bundleDependencies": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-dependencies": "off",
         "package-json/require-description": "error",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-devDependencies": "off",
+        "package-json/require-engines": "error",
+        "package-json/require-exports": "error",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-files": "off",
+        "package-json/require-keywords": "error",
         "package-json/require-license": "error",
         "package-json/require-name": "error",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-optionalDependencies": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-peerDependencies": "off",
+        // Not part of the npm docs, leaving it disabled for now.
+        "package-json/require-sideEffects": "off",
         "package-json/require-type": "error",
+        // Not part of the npm docs, leaving it disabled for now.
+        "package-json/require-types": "off",
         "package-json/require-version": "error",
+        "package-json/restrict-dependency-ranges": "error",
+        "package-json/restrict-private-properties": "error",
+        "package-json/scripts-name-casing": "error",
         "package-json/sort-collections": "error",
+        "package-json/specify-peers-locally": "error",
         "package-json/unique-dependencies": "error",
         "package-json/valid-author": "error",
         "package-json/valid-bin": "error",
         "package-json/valid-bundleDependencies": "error",
         "package-json/valid-config": "error",
+        "package-json/valid-contributors": "error",
         "package-json/valid-cpu": "error",
         "package-json/valid-dependencies": "error",
         "package-json/valid-description": "error",
         "package-json/valid-devDependencies": "error",
         "package-json/valid-directories": "error",
+        "package-json/valid-engines": "error",
         "package-json/valid-exports": "error",
+        "package-json/valid-files": "error",
+        "package-json/valid-homepage": "error",
+        "package-json/valid-keywords": "error",
         "package-json/valid-license": "error",
+        "package-json/valid-main": "error",
+        "package-json/valid-man": "error",
         "package-json/valid-name": "error",
         "package-json/valid-optionalDependencies": "error",
-        "package-json/valid-package-definition": "error",
+        "package-json/valid-os": "error",
         "package-json/valid-peerDependencies": "error",
+        "package-json/valid-private": "error",
+        "package-json/valid-publishConfig": "error",
+        "package-json/valid-repository": "error",
         "package-json/valid-repository-directory": "error",
         "package-json/valid-scripts": "error",
+        "package-json/valid-sideEffects": "error",
         "package-json/valid-type": "error",
-        "package-json/valid-version": "error"
+        "package-json/valid-version": "error",
+        "package-json/valid-workspaces": "error"
     }
 }])
