@@ -866,7 +866,8 @@ export default defineConfig([{
         "unicorn/no-array-callback-reference": "off",
         "unicorn/no-array-for-each": "error",
         "unicorn/no-array-method-this-argument": "error",
-        "unicorn/no-array-reduce": "error",
+        // Reduce might be complex in some cases, but it's usually miles faster.
+        "unicorn/no-array-reduce": "off",
         "unicorn/no-array-reverse": "error",
         "unicorn/no-array-sort": "error",
         "unicorn/no-await-expression-member": "error",
@@ -942,7 +943,8 @@ export default defineConfig([{
         "unicorn/prefer-dom-node-text-content": "error",
         "unicorn/prefer-event-target": "error",
         "unicorn/prefer-export-from": "error",
-        "unicorn/prefer-global-this": "error",
+        // Doesn't take into account all cases where replacement isn't possible.
+        "unicorn/prefer-global-this": "off",
         "unicorn/prefer-import-meta-properties": "error",
         "unicorn/prefer-includes": "error",
         "unicorn/prefer-json-parse-buffer": "error",
