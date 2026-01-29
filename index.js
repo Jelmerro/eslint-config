@@ -90,7 +90,6 @@ export default defineConfig([{
         "@stylistic/jsx-pascal-case": "error",
         "@stylistic/jsx-quotes": "error",
         "@stylistic/jsx-self-closing-comp": "error",
-        "@stylistic/jsx-sort-props": "error",
         "@stylistic/jsx-tag-spacing": "error",
         "@stylistic/jsx-wrap-multilines": "error",
         "@stylistic/key-spacing": "error",
@@ -711,6 +710,12 @@ export default defineConfig([{
                 "type": "natural"
             }
         ],
+        "perfectionist/sort-export-attributes": [
+            "error",
+            {
+                "type": "natural"
+            }
+        ],
         "perfectionist/sort-exports": [
             "error",
             {
@@ -718,6 +723,12 @@ export default defineConfig([{
             }
         ],
         "perfectionist/sort-heritage-clauses": [
+            "error",
+            {
+                "type": "natural"
+            }
+        ],
+        "perfectionist/sort-import-attributes": [
             "error",
             {
                 "type": "natural"
@@ -1126,6 +1137,7 @@ export default defineConfig([{
         "package-json/require-exports": "error",
         // These should continue to be optional, only add when actually needed.
         "package-json/require-files": "off",
+        "package-json/require-homepage": "error",
         "package-json/require-keywords": "error",
         "package-json/require-license": "error",
         "package-json/require-name": "error",
@@ -1133,6 +1145,8 @@ export default defineConfig([{
         "package-json/require-optionalDependencies": "off",
         // These should continue to be optional, only add when actually needed.
         "package-json/require-peerDependencies": "off",
+        "package-json/require-repository": "error",
+        "package-json/require-scripts": "error",
         // Not part of the npm docs, leaving it disabled for now.
         "package-json/require-sideEffects": "off",
         "package-json/require-type": "error",
@@ -1163,6 +1177,7 @@ export default defineConfig([{
         "package-json/valid-license": "error",
         "package-json/valid-main": "error",
         "package-json/valid-man": "error",
+        "package-json/valid-module": "error",
         "package-json/valid-name": "error",
         "package-json/valid-optionalDependencies": "error",
         "package-json/valid-os": "error",
