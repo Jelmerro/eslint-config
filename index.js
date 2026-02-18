@@ -406,9 +406,11 @@ export default defineConfig([{
         ],
         "n/prefer-global/buffer": "error",
         "n/prefer-global/console": "error",
+        "n/prefer-global/crypto": "error",
         "n/prefer-global/process": "error",
         "n/prefer-global/text-decoder": "error",
         "n/prefer-global/text-encoder": "error",
+        "n/prefer-global/timers": "error",
         "n/prefer-global/url": "error",
         "n/prefer-global/url-search-params": "error",
         "n/prefer-node-protocol": "error",
@@ -869,6 +871,7 @@ export default defineConfig([{
         "unicorn/filename-case": "error",
         // It seems better to decide case by case which import style is better.
         "unicorn/import-style": "off",
+        "unicorn/isolated-functions": "error",
         "unicorn/new-for-builtins": "error",
         "unicorn/no-abusive-eslint-disable": "error",
         "unicorn/no-accessor-recursion": "error",
@@ -952,7 +955,8 @@ export default defineConfig([{
         "unicorn/prefer-dom-node-dataset": "error",
         "unicorn/prefer-dom-node-remove": "error",
         "unicorn/prefer-dom-node-text-content": "error",
-        "unicorn/prefer-event-target": "error",
+        // Seems fine to keep using the Node.js version over this for now.
+        "unicorn/prefer-event-target": "off",
         "unicorn/prefer-export-from": "error",
         // Doesn't take into account all cases where replacement isn't possible.
         "unicorn/prefer-global-this": "off",
