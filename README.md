@@ -12,6 +12,7 @@ The main components are:
 
 - The main eslint config, with all the rules, see `./index.js`
 - JSDoc rules, based on [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc/)
+- Padding line rules, based on [eslint-plugin-padding-lines](https://github.com/Jelmerro/eslint-plugin-padding-lines/)
 - Sort rules, based on [eslint-plugin-perfectionist](https://github.com/azat-io/eslint-plugin-perfectionist/)
 - Stylistic rules, based on [eslint-stylistic](https://github.com/eslint-community/eslint-stylistic/)
 - JSON rules, based on [@eslint/json](https://github.com/eslint/json/) and [eslint-plugin-jsonc](https://github.com/ota-meshi/eslint-plugin-jsonc/)
@@ -20,7 +21,7 @@ The main components are:
 - Misc gotchas and guidelines, based on [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/)
 - Gitignore support, based on [eslint-config-flat-gitignore](https://github.com/antfu/eslint-config-flat-gitignore/)
 
-The config is currently updated to eslint 9 and supports `eslint.config.js`.
+The config is currently updated to eslint 10 and supports `eslint.config.js`.
 Since the config depends on eslint, you only need to install the config, not eslint itself.
 This has the advantage that the config will always use a compatible eslint version.
 
