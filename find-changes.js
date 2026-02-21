@@ -21,6 +21,9 @@ const getAllRules = async() => {
     for (const packageName of eslintPackages) {
         const dep = await import(packageName)
         const resolved = dep?.default?.default ?? dep?.default ?? dep
+        if (!resolved?.rules) {
+            continue
+        }
         const prefix = packageToRulePrefix(packageName)
         const packageRules = Object.keys(resolved.rules).map(ruleName => ({
             "deprecated": !!resolved.rules[ruleName].meta.deprecated,
@@ -44,9 +47,8 @@ const getAllRules = async() => {
     return allRules
 }
 
-
 const allRules = await getAllRules()
-const usedRules = new Set(eslintConfig.flatMap(e => Object.keys(e.rules)))
+const usedRules = new Set(eslintConfig.flatMap(e => Object.keys(e.rules ?? {})))
 for (const rule of allRules) {
     if (!usedRules.has(rule.name) && !rule.deprecated) {
         console.info(`unused: ${rule.name}`)

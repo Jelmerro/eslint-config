@@ -1,5 +1,6 @@
 import json from "@eslint/json"
 import stylistic from "@stylistic/eslint-plugin"
+import gitignore from "eslint-config-flat-gitignore"
 import jsdoc from "eslint-plugin-jsdoc"
 import jsonc from "eslint-plugin-jsonc"
 import n from "eslint-plugin-n"
@@ -10,7 +11,31 @@ import unicorn from "eslint-plugin-unicorn"
 import {defineConfig} from "eslint/config"
 import globals from "globals"
 
+export const JS = 1
+
+export const JSON = 2
+
+export const PACKAGE = 3
+
+const arrow = {"selector": "Program > VariableDeclaration[declarations.0"
+    + ".init.type='ArrowFunctionExpression']"}
+const testFunc = {"selector": "Program > ExpressionStatement[expression."
+    + "callee.name='test']"}
+const describeFunc = {"selector": "Program > ExpressionStatement[expression."
+    + "callee.name='describe']"}
+const topFuncs = [arrow, testFunc, describeFunc]
+const requireVariable = {"selector": "Program > VariableDeclaration["
+    + "declarations.0.init.callee.name='require']"}
+const requireExpression = {"selector": "Program > ExpressionStatement["
+    + "expression.callee.name='require']"}
+const importKeyword = {"selector": "ImportDeclaration"}
+const topImports = [requireVariable, requireExpression, importKeyword]
+const anyExports = ["export", "cjs-export"]
+
 export default defineConfig([{
+    "ignores": gitignore().ignores
+},
+{
     "files": ["**/*.{js,jsx,mjs,cjs}"],
     "ignores": [
         "**/*.min.js",
@@ -130,7 +155,7 @@ export default defineConfig([{
         "@stylistic/no-multiple-empty-lines": [
             "error",
             {
-                "max": 2,
+                "max": 1,
                 "maxBOF": 0,
                 "maxEOF": 0
             }
@@ -156,7 +181,18 @@ export default defineConfig([{
             "error",
             "never"
         ],
-        "@stylistic/padding-line-between-statements": "error",
+        "@stylistic/padding-line-between-statements": [
+            "error",
+            {"blankLine": "never", "next": "*", "prev": "*"},
+            {"blankLine": "always", "next": "*", "prev": "directive"},
+            {"blankLine": "always", "next": "*", "prev": topFuncs},
+            {"blankLine": "always", "next": topFuncs, "prev": "*"},
+            {"blankLine": "always", "next": anyExports, "prev": "*"},
+            {"blankLine": "always", "next": "*", "prev": anyExports},
+            {"blankLine": "always", "next": "*", "prev": topImports},
+            {"blankLine": "always", "next": topImports, "prev": "*"},
+            {"blankLine": "never", "next": topImports, "prev": topImports}
+        ],
         "@stylistic/quote-props": "error",
         "@stylistic/quotes": [
             "error",
@@ -263,7 +299,7 @@ export default defineConfig([{
         // Reports false positives if used together with helpers like Partial
         "jsdoc/imports-as-dependencies": "off",
         "jsdoc/informative-docs": "error",
-        // Already controlled by the padding-lines plugin
+        // Already controlled by @stylistic/padding-line-between-statements
         "jsdoc/lines-before-block": "off",
         "jsdoc/match-description": "error",
         // Good naming cannot be automated, requires manual review
@@ -620,74 +656,8 @@ export default defineConfig([{
             "never"
         ],
         "operator-assignment": "error",
+        "padding-lines/arrays": "error",
         "padding-lines/objects": "error",
-        "padding-lines/statements": [
-            "error",
-            {
-                "blankLine": "never",
-                "next": "*",
-                "prev": "*"
-            },
-            {
-                "blankLine": "always",
-                "next": [
-                    "var",
-                    "let",
-                    "const"
-                ],
-                "prev": "directive"
-            },
-            {
-                "blankLine": "always",
-                "next": [
-                    "var",
-                    "let",
-                    "const"
-                ],
-                "prev": "arrow"
-            },
-            {
-                "blankLine": "always",
-                "next": "arrow",
-                "prev": "arrow"
-            },
-            {
-                "blankLine": "always",
-                "next": "arrow",
-                "prev": [
-                    "var",
-                    "let",
-                    "const"
-                ]
-            },
-            {
-                "blankLine": "any",
-                "next": "*",
-                "prev": [
-                    "import",
-                    "cjs-import"
-                ]
-            },
-            {
-                "blankLine": "always",
-                "next": [
-                    "export",
-                    "cjs-export"
-                ],
-                "prev": "*"
-            },
-            {
-                "blankLine": "always",
-                "next": [
-                    "export",
-                    "cjs-export"
-                ],
-                "prev": [
-                    "export",
-                    "cjs-export"
-                ]
-            }
-        ],
         "perfectionist/sort-array-includes": [
             "error",
             {
