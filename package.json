@@ -25,18 +25,18 @@
         "update": "npx -y jelmerro/nus"
     },
     "dependencies": {
-        "@eslint/json": "1.0.1",
-        "@stylistic/eslint-plugin": "5.9.0",
-        "eslint": "10.0.1",
-        "eslint-config-flat-gitignore": "2.2.1",
-        "eslint-plugin-jsdoc": "62.7.0",
-        "eslint-plugin-jsonc": "3.1.0",
-        "eslint-plugin-n": "17.24.0",
-        "eslint-plugin-package-json": "0.89.1",
+        "@eslint/json": "2.0.1",
+        "@stylistic/eslint-plugin": "5.10.0",
+        "eslint": "10.6.0",
+        "eslint-config-flat-gitignore": "2.3.0",
+        "eslint-plugin-jsdoc": "63.0.13",
+        "eslint-plugin-jsonc": "3.3.0",
+        "eslint-plugin-n": "18.2.1",
+        "eslint-plugin-package-json": "1.5.0",
         "eslint-plugin-padding-lines": "github:Jelmerro/eslint-plugin-padding-lines",
-        "eslint-plugin-perfectionist": "5.6.0",
-        "eslint-plugin-unicorn": "63.0.0",
-        "globals": "17.3.0"
+        "eslint-plugin-perfectionist": "5.10.0",
+        "eslint-plugin-unicorn": "71.1.0",
+        "globals": "17.7.0"
     },
     "devDependencies": {
         "type-config": "github:Jelmerro/type-config"
