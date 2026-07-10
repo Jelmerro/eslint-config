@@ -664,6 +664,8 @@ export default defineConfig([{
                 "type": "natural"
             }
         ],
+        // Requires manually selecting arrays to sort, cool but excessive.
+        "perfectionist/sort-arrays": "off",
         "perfectionist/sort-classes": [
             "error",
             {
@@ -1091,6 +1093,7 @@ export default defineConfig([{
             }
         ],
         "package-json/no-empty-fields": "error",
+        "package-json/no-local-dependencies": "error",
         "package-json/no-redundant-files": "error",
         "package-json/no-redundant-publishConfig": "error",
         "package-json/order-properties": "error",
@@ -1098,26 +1101,61 @@ export default defineConfig([{
         "package-json/repository-shorthand": "off",
         "package-json/require-attribution": "error",
         "package-json/require-author": "error",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-bin": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-browser": "off",
         "package-json/require-bugs": "error",
         // These should continue to be optional, only add when actually needed.
         "package-json/require-bundleDependencies": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-config": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-contributors": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-cpu": "off",
         // These should continue to be optional, only add when actually needed.
         "package-json/require-dependencies": "off",
         "package-json/require-description": "error",
         // These should continue to be optional, only add when actually needed.
         "package-json/require-devDependencies": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-devEngines": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-directories": "off",
         "package-json/require-engines": "error",
         "package-json/require-exports": "error",
         // These should continue to be optional, only add when actually needed.
         "package-json/require-files": "off",
+        "package-json/require-funding": "error",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-gypfile": "off",
         "package-json/require-homepage": "error",
         "package-json/require-keywords": "error",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-libc": "off",
         "package-json/require-license": "error",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-main": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-man": "off",
+        // Not part of the npm docs, leaving it disabled for now.
+        "package-json/require-module": "off",
         "package-json/require-name": "error",
         // These should continue to be optional, only add when actually needed.
         "package-json/require-optionalDependencies": "off",
         // These should continue to be optional, only add when actually needed.
+        "package-json/require-os": "off",
+        // Not part of the npm docs, leaving it disabled for now.
+        "package-json/require-packageManager": "off",
+        // These should continue to be optional, only add when actually needed.
         "package-json/require-peerDependencies": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-peerDependenciesMeta": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-private": "off",
+        // These should continue to be optional, only add when actually needed.
+        "package-json/require-publishConfig": "off",
         "package-json/require-repository": "error",
         "package-json/require-scripts": "error",
         // Not part of the npm docs, leaving it disabled for now.
@@ -1128,12 +1166,15 @@ export default defineConfig([{
         "package-json/require-version": "error",
         "package-json/restrict-dependency-ranges": "error",
         "package-json/restrict-private-properties": "error",
+        "package-json/restrict-top-level-properties": "error",
         "package-json/scripts-name-casing": "error",
         "package-json/sort-collections": "error",
         "package-json/specify-peers-locally": "error",
         "package-json/unique-dependencies": "error",
         "package-json/valid-author": "error",
         "package-json/valid-bin": "error",
+        "package-json/valid-browser": "error",
+        "package-json/valid-bugs": "error",
         "package-json/valid-bundleDependencies": "error",
         "package-json/valid-config": "error",
         "package-json/valid-contributors": "error",
@@ -1141,12 +1182,16 @@ export default defineConfig([{
         "package-json/valid-dependencies": "error",
         "package-json/valid-description": "error",
         "package-json/valid-devDependencies": "error",
+        "package-json/valid-devEngines": "error",
         "package-json/valid-directories": "error",
         "package-json/valid-engines": "error",
         "package-json/valid-exports": "error",
         "package-json/valid-files": "error",
+        "package-json/valid-funding": "error",
+        "package-json/valid-gypfile": "error",
         "package-json/valid-homepage": "error",
         "package-json/valid-keywords": "error",
+        "package-json/valid-libc": "error",
         "package-json/valid-license": "error",
         "package-json/valid-main": "error",
         "package-json/valid-man": "error",
@@ -1154,7 +1199,10 @@ export default defineConfig([{
         "package-json/valid-name": "error",
         "package-json/valid-optionalDependencies": "error",
         "package-json/valid-os": "error",
+        "package-json/valid-packageManager": "error",
         "package-json/valid-peerDependencies": "error",
+        "package-json/valid-peerDependenciesMeta": "error",
+        "package-json/valid-peerDependenciesMeta-relationship": "error",
         "package-json/valid-private": "error",
         "package-json/valid-publishConfig": "error",
         "package-json/valid-repository": "error",
