@@ -25,13 +25,14 @@ const getAllRules = async() => {
             continue
         }
         const prefix = packageToRulePrefix(packageName)
-        const packageRules = Object.keys(resolved.rules).map(ruleName => ({
-            "deprecated": !!resolved.rules[ruleName].meta.deprecated,
-            "name": `${prefix}/${ruleName}`,
-            "package": packageName,
-            prefix,
-            "rule": ruleName
-        }))
+        const packageRules = Object.entries(resolved.rules)
+            .map(([ruleName, value]) => ({
+                "deprecated": !!value.meta.deprecated,
+                "name": `${prefix}/${ruleName}`,
+                "package": packageName,
+                prefix,
+                "rule": ruleName
+            }))
         allRules.push(...packageRules)
     }
     const {builtinRules} = await import("eslint/use-at-your-own-risk")

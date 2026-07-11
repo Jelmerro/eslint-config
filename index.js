@@ -86,10 +86,10 @@ export default defineConfig([{
         "@stylistic/curly-newline": "error",
         "@stylistic/dot-location": ["error", "property"],
         "@stylistic/eol-last": "error",
-        // Does not allow a config specific enough to allow foo(<x>,<y>,\n<z>)
+        // Does not allow a config specific enough to allow foo(<x>,<y>,\n<z>).
         "@stylistic/function-call-argument-newline": "off",
         "@stylistic/function-call-spacing": "error",
-        // Does not allow a config specific enough to allow foo(\n<x>,<y>,<z>)
+        // Does not allow a config specific enough to allow foo(\n<x>,<y>,<z>).
         "@stylistic/function-paren-newline": "off",
         "@stylistic/generator-star-spacing": "error",
         "@stylistic/implicit-arrow-linebreak": "error",
@@ -97,7 +97,7 @@ export default defineConfig([{
             "error",
             4
         ],
-        // Completely inconsistent formatting, no options to provide context
+        // Completely inconsistent formatting, no options to provide context.
         "@stylistic/indent-binary-ops": "off",
         "@stylistic/jsx-child-element-spacing": "error",
         "@stylistic/jsx-closing-bracket-location": "error",
@@ -142,13 +142,13 @@ export default defineConfig([{
         "@stylistic/multiline-comment-style": "off",
         "@stylistic/multiline-ternary": "error",
         "@stylistic/new-parens": "error",
-        // Does not have options to allow chaining as much as fits per line
+        // Does not have options to allow chaining as much as fits per line.
         "@stylistic/newline-per-chained-call": "off",
         "@stylistic/no-confusing-arrow": "error",
         "@stylistic/no-extra-parens": "error",
         "@stylistic/no-extra-semi": "error",
         "@stylistic/no-floating-decimal": "error",
-        // Mixed operators are fine and can be used together safely
+        // Mixed operators are fine and can be used together safely.
         "@stylistic/no-mixed-operators": "off",
         "@stylistic/no-mixed-spaces-and-tabs": "error",
         "@stylistic/no-multi-spaces": "error",
@@ -227,7 +227,7 @@ export default defineConfig([{
         "@stylistic/type-generic-spacing": "error",
         "@stylistic/type-named-tuple-spacing": "error",
         "@stylistic/wrap-iife": "error",
-        // Unnecessary, should be reversed as part of redundant brackets
+        // Unnecessary, should be reversed as part of redundant brackets.
         "@stylistic/wrap-regex": "off",
         "@stylistic/yield-star-spacing": "error",
         "accessor-pairs": [
@@ -253,12 +253,12 @@ export default defineConfig([{
             }
         ],
         "class-methods-use-this": "error",
-        // Complexity is not something that is calculated or hard defined
+        // Complexity is not something that is calculated or hard defined.
         "complexity": "off",
-        // The treatUndefinedAsUnspecified option requires redundant void calls
+        // The treatUndefinedAsUnspecified option requires redundant void calls.
         "consistent-return": "off",
         "consistent-this": "error",
-        // Also triggers (incorrectly?) when calling super in subclasses
+        // Also triggers (incorrectly?) when calling super in subclasses.
         "constructor-super": "off",
         "curly": "error",
         "default-case": "error",
@@ -274,15 +274,15 @@ export default defineConfig([{
         "grouped-accessor-pairs": "error",
         "guard-for-in": "error",
         "id-denylist": "error",
-        // Single character names can be great inside arrow functions like map
+        // Single character names can be great inside arrow functions like map.
         "id-length": "off",
         "id-match": "error",
         "init-declarations": "error",
         "jsdoc/check-access": "error",
         "jsdoc/check-alignment": "error",
-        // Examples are not essential if there is a clear description and types
+        // Examples are not essential if there is a clear description and types.
         "jsdoc/check-examples": "off",
-        // Plugin has no idea about multiline objects or related indents
+        // Plugin has no idea about multiline objects or related indents.
         "jsdoc/check-indentation": "off",
         "jsdoc/check-line-alignment": "error",
         "jsdoc/check-param-names": "error",
@@ -296,38 +296,38 @@ export default defineConfig([{
         "jsdoc/empty-tags": "error",
         "jsdoc/escape-inline-tags": "error",
         "jsdoc/implements-on-classes": "error",
-        // Reports false positives if used together with helpers like Partial
+        // Reports false positives if used together with helpers like Partial.
         "jsdoc/imports-as-dependencies": "off",
         "jsdoc/informative-docs": "error",
-        // Already controlled by @stylistic/padding-line-between-statements
+        // Already controlled by @stylistic/padding-line-between-statements.
         "jsdoc/lines-before-block": "off",
         "jsdoc/match-description": "error",
-        // Good naming cannot be automated, requires manual review
+        // Good naming cannot be automated, requires manual review.
         "jsdoc/match-name": "off",
         "jsdoc/multiline-blocks": "error",
         "jsdoc/no-bad-blocks": "error",
         "jsdoc/no-blank-block-descriptions": "error",
         "jsdoc/no-blank-blocks": "error",
         "jsdoc/no-defaults": "error",
-        // No need, default format is quite alright combined with lint rules
+        // No need, default format is quite alright combined with lint rules.
         "jsdoc/no-missing-syntax": "off",
         "jsdoc/no-multi-asterisks": "error",
-        // So far all doc syntax is allowed
+        // So far all doc syntax is allowed.
         "jsdoc/no-restricted-syntax": "off",
-        // Types are encouraged, therefor there is no need to prevent their use
+        // Types are encouraged, therefor there is no need to prevent their use.
         "jsdoc/no-types": "off",
-        // Does not take node_modules nor custom typedefs into account
+        // Does not take node_modules nor custom typedefs into account.
         "jsdoc/no-undefined-types": "off",
-        // Inline imports are preferred to separate imports for documentation
+        // Inline imports are preferred to separate imports for documentation.
         "jsdoc/prefer-import-tag": "off",
         "jsdoc/reject-any-type": "error",
         "jsdoc/reject-function-type": "error",
         "jsdoc/require-asterisk-prefix": "error",
         "jsdoc/require-description": "error",
         "jsdoc/require-description-complete-sentence": "error",
-        // Examples are not essential if there is a clear description and types
+        // Examples are not essential if there is a clear description and types.
         "jsdoc/require-example": "off",
-        // A fileoverview is not required as it seems highly redundant
+        // A fileoverview is not required as it seems highly redundant.
         "jsdoc/require-file-overview": "off",
         "jsdoc/require-hyphen-before-param-description": "error",
         "jsdoc/require-jsdoc": [
@@ -347,7 +347,7 @@ export default defineConfig([{
         "jsdoc/require-next-description": "error",
         "jsdoc/require-next-type": "error",
         "jsdoc/require-param": "error",
-        // Seems like a lot of work for now, but might be enabled in the future
+        // Seems like a lot of work for now, but might be enabled in the future.
         "jsdoc/require-param-description": "off",
         "jsdoc/require-param-name": "error",
         "jsdoc/require-param-type": "error",
@@ -356,13 +356,13 @@ export default defineConfig([{
         "jsdoc/require-property-name": "error",
         "jsdoc/require-property-type": "error",
         "jsdoc/require-rejects": "error",
-        // More often than not returns are automatically typed, so no need
+        // More often than not returns are automatically typed, so no need.
         "jsdoc/require-returns": "off",
         "jsdoc/require-returns-check": "error",
-        // Seems like a lot of work for now, but might be enabled in the future
+        // Seems like a lot of work for now, but might be enabled in the future.
         "jsdoc/require-returns-description": "off",
         "jsdoc/require-returns-type": "error",
-        // There are no required tags that aren't covered by other rules
+        // There are no required tags that aren't covered by other rules.
         "jsdoc/require-tags": "off",
         "jsdoc/require-template": "error",
         "jsdoc/require-template-description": "error",
@@ -375,29 +375,29 @@ export default defineConfig([{
         "jsdoc/require-yields-type": "error",
         "jsdoc/sort-tags": "error",
         "jsdoc/tag-lines": "error",
-        // There shouldn't be any markdown nor html in the description at all
+        // There shouldn't be any markdown nor html in the description at all.
         "jsdoc/text-escaping": "off",
         "jsdoc/ts-method-signature-style": "error",
         "jsdoc/ts-no-empty-object-type": "error",
         "jsdoc/ts-no-unnecessary-template-expression": "error",
         "jsdoc/ts-prefer-function-type": "error",
-        // Still experimental and unionSpacing does not allow optional newlines
+        // Still experimental and unionSpacing does not allow optional newlines.
         "jsdoc/type-formatting": "off",
         "jsdoc/valid-types": "error",
         "logical-assignment-operators": "error",
-        // More classes the better if you need them, no limit required
+        // More classes the better if you need them, no limit required.
         "max-classes-per-file": "off",
         "max-depth": "error",
-        // Seems like a lot of work for now, but might be enabled in the future
+        // Seems like a lot of work for now, but might be enabled in the future.
         "max-lines": "off",
-        // Seems like a lot of work for now, but might be enabled in the future
+        // Seems like a lot of work for now, but might be enabled in the future.
         "max-lines-per-function": "off",
         "max-nested-callbacks": "error",
         "max-params": [
             "error",
             5
         ],
-        // Complexity is not something that is calculated or hard defined
+        // Complexity is not something that is calculated or hard defined.
         "max-statements": "off",
         // Too many false positives, would be nice to have, but annoying.
         "n/callback-return": "off",
@@ -458,7 +458,7 @@ export default defineConfig([{
         "no-alert": "error",
         "no-array-constructor": "error",
         "no-async-promise-executor": "error",
-        // There are uses when awaiting the steps is different than Promise.all
+        // There are uses when awaiting the steps is different than Promise.all.
         "no-await-in-loop": "off",
         "no-bitwise": "error",
         "no-caller": "error",
@@ -479,9 +479,9 @@ export default defineConfig([{
         "no-const-assign": "error",
         "no-constant-binary-expression": "error",
         "no-constant-condition": "error",
-        // There are cases where this is desired, and it is rarely accidental
+        // There are cases where this is desired, and it is rarely accidental.
         "no-constructor-return": "off",
-        // There are plenty of legitimate cases of continue over a few ifs
+        // There are plenty of legitimate cases of continue over a few ifs.
         "no-continue": "off",
         "no-control-regex": "error",
         "no-debugger": "error",
@@ -533,10 +533,10 @@ export default defineConfig([{
         "no-labels": "error",
         "no-lone-blocks": "error",
         "no-lonely-if": "error",
-        // This can be good together with early returns or unordered loops
+        // This can be good together with early returns or unordered loops.
         "no-loop-func": "off",
         "no-loss-of-precision": "error",
-        // Overly annoying with many many false positives
+        // Overly annoying with many many false positives.
         "no-magic-numbers": "off",
         "no-misleading-character-class": "error",
         "no-multi-assign": "error",
@@ -593,7 +593,7 @@ export default defineConfig([{
             }
         ],
         "no-return-assign": "error",
-        // False positives when trying to detect/filter these in unsafe input
+        // False positives when trying to detect/filter these in unsafe input.
         "no-script-url": "off",
         "no-self-assign": "error",
         "no-self-compare": "error",
@@ -609,7 +609,7 @@ export default defineConfig([{
         "no-unassigned-vars": "error",
         "no-undef": "error",
         "no-undef-init": "error",
-        // Both no-global-assign and no-shadow-restricted-names prevent misuse
+        // Both no-global-assign and no-shadow-restricted-names prevent misuse.
         "no-undefined": "off",
         "no-underscore-dangle": "error",
         "no-unexpected-multiline": "error",
@@ -630,7 +630,7 @@ export default defineConfig([{
             }
         ],
         "no-use-before-define": "warn",
-        // Known limitations are annoying and this is rarely a problem anyway
+        // Known limitations are annoying and this is rarely a problem anyway.
         "no-useless-assignment": "off",
         "no-useless-backreference": "error",
         "no-useless-call": "error",
@@ -655,7 +655,8 @@ export default defineConfig([{
             "error",
             "never"
         ],
-        "operator-assignment": "error",
+        // Handled by unicorn.
+        "operator-assignment": "off",
         "padding-lines/arrays": "error",
         "padding-lines/objects": "error",
         "perfectionist/sort-array-includes": [
@@ -797,7 +798,7 @@ export default defineConfig([{
         "prefer-const": "error",
         "prefer-destructuring": "error",
         "prefer-exponentiation-operator": "error",
-        // Indexes are fine, no need
+        // Indexes are fine, no need.
         "prefer-named-capture-group": "off",
         "prefer-numeric-literals": "error",
         "prefer-object-has-own": "error",
@@ -809,15 +810,15 @@ export default defineConfig([{
         "prefer-template": "error",
         "preserve-caught-error": "error",
         "radix": "error",
-        // Seems like a lot of work for now, but might be enabled in the future
+        // Seems like a lot of work for now, but might be enabled in the future.
         "require-atomic-updates": "off",
         "require-await": "error",
-        // Changes the behavior of \w, so isn't safe yet is also rarely needed
+        // Changes the behavior of \w, so isn't safe yet is also rarely needed.
         "require-unicode-regexp": "off",
         "require-yield": "error",
-        // Handled by perfectionist
+        // Handled by perfectionist.
         "sort-imports": "off",
-        // Handled by perfectionist
+        // Handled by perfectionist.
         "sort-keys": "off",
         "sort-vars": "error",
         "strict": [
@@ -826,139 +827,333 @@ export default defineConfig([{
         ],
         "symbol-description": "error",
         "unicode-bom": "error",
+        "unicorn/better-dom-traversing": "error",
         "unicorn/catch-error-name": "error",
+        "unicorn/class-reference-in-static-methods": "error",
+        // Basic capital letter checks for certain words, fine to disable.
+        "unicorn/comment-content": "off",
         "unicorn/consistent-assert": "error",
+        // Type and name together should be enough, no need to automate checks.
+        "unicorn/consistent-boolean-name": "off",
+        "unicorn/consistent-class-member-order": "error",
+        "unicorn/consistent-compound-words": "error",
+        "unicorn/consistent-conditional-object-spread": "error",
         "unicorn/consistent-date-clone": "error",
         "unicorn/consistent-destructuring": "error",
         "unicorn/consistent-empty-array-spread": "error",
         "unicorn/consistent-existence-index-check": "error",
+        "unicorn/consistent-export-decorator-position": "error",
         "unicorn/consistent-function-scoping": "error",
+        "unicorn/consistent-function-style": "error",
         "unicorn/consistent-json-file-read": "error",
+        "unicorn/consistent-optional-chaining": "error",
+        "unicorn/consistent-template-literal-escape": "error",
+        "unicorn/consistent-tuple-labels": "error",
         "unicorn/custom-error-definition": "error",
+        // Does not work well combined with using arrow functions by default.
+        "unicorn/default-export-style": "off",
         "unicorn/dom-node-dataset": "error",
         "unicorn/empty-brace-spaces": "error",
         "unicorn/error-message": "error",
         "unicorn/escape-case": ["error", "lowercase"],
         "unicorn/expiring-todo-comments": "error",
         "unicorn/explicit-length-check": "error",
+        "unicorn/explicit-timer-delay": "error",
         "unicorn/filename-case": "error",
+        "unicorn/id-match": "error",
         // It seems better to decide case by case which import style is better.
         "unicorn/import-style": "off",
         "unicorn/isolated-functions": "error",
+        "unicorn/logical-assignment-operators": "error",
+        // Covered more than enough by max depth, max line length and reviews.
+        "unicorn/max-nested-calls": "off",
         // A lot of common abbreviations are also blocked with this on.
         "unicorn/name-replacements": "off",
         "unicorn/new-for-builtins": "error",
         "unicorn/no-abusive-eslint-disable": "error",
         "unicorn/no-accessor-recursion": "error",
+        "unicorn/no-accidental-bitwise-operator": "error",
         "unicorn/no-anonymous-default-export": "error",
         // This can be guarded for perfectly fine with types.
         "unicorn/no-array-callback-reference": "off",
+        "unicorn/no-array-concat-in-loop": "error",
+        "unicorn/no-array-fill-with-reference-type": "error",
+        "unicorn/no-array-from-fill": "error",
+        // Lint rule docs are clear: this is not always bad, so no need to lint.
+        "unicorn/no-array-front-mutation": "off",
         "unicorn/no-array-method-this-argument": "error",
         // Reduce might be complex in some cases, but it's usually miles faster.
         "unicorn/no-array-reduce": "off",
         "unicorn/no-array-reverse": "error",
         "unicorn/no-array-sort": "error",
+        "unicorn/no-array-sort-for-min-max": "error",
+        "unicorn/no-array-splice": "error",
+        // Conflicts with proper jsdoc formatting rules and conventions.
+        "unicorn/no-asterisk-prefix-in-documentation-comments": "off",
+        "unicorn/no-async-promise-finally": "error",
         "unicorn/no-await-expression-member": "error",
         "unicorn/no-await-in-promise-methods": "error",
+        "unicorn/no-blob-to-file": "error",
+        "unicorn/no-boolean-sort-comparator": "error",
+        // This pattern is fine to use with a good indent and max nest depth.
+        "unicorn/no-break-in-nested-loop": "off",
+        "unicorn/no-canvas-to-image": "error",
+        "unicorn/no-chained-comparison": "error",
+        "unicorn/no-collection-bracket-access": "error",
+        // It can be fairly useful to also check for computed and builtin props.
+        "unicorn/no-computed-property-existence-check": "off",
+        "unicorn/no-confusing-array-splice": "error",
+        "unicorn/no-confusing-array-with": "error",
         "unicorn/no-console-spaces": "error",
+        "unicorn/no-constant-zero-expression": "error",
+        "unicorn/no-declarations-before-early-exit": "error",
         "unicorn/no-document-cookie": "error",
+        "unicorn/no-double-comparison": "error",
+        "unicorn/no-duplicate-if-branches": "error",
+        "unicorn/no-duplicate-logical-operands": "error",
+        // Adds another level of nesting with little advantages to offer.
+        "unicorn/no-duplicate-loops": "off",
+        "unicorn/no-duplicate-set-values": "error",
         "unicorn/no-empty-file": "error",
+        "unicorn/no-error-property-assignment": "error",
+        "unicorn/no-exports-in-scripts": "error",
         "unicorn/no-for-each": "error",
         "unicorn/no-for-loop": "error",
+        "unicorn/no-global-object-property-assignment": "error",
         "unicorn/no-immediate-mutation": "error",
+        "unicorn/no-impossible-length-comparison": "error",
+        "unicorn/no-incorrect-query-selector": "error",
+        "unicorn/no-incorrect-template-string-interpolation": "error",
         "unicorn/no-instanceof-builtins": "error",
+        "unicorn/no-invalid-argument-count": "error",
+        "unicorn/no-invalid-character-comparison": "error",
         "unicorn/no-invalid-fetch-options": "error",
+        "unicorn/no-invalid-file-input-accept": "error",
         "unicorn/no-invalid-remove-event-listener": "error",
+        "unicorn/no-invalid-well-known-symbol-methods": "error",
         // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1639
         "unicorn/no-keyword-prefix": "off",
+        "unicorn/no-late-current-target-access": "error",
+        "unicorn/no-late-event-control": "error",
         "unicorn/no-lonely-if": "error",
+        "unicorn/no-loop-iterable-mutation": "error",
         "unicorn/no-magic-array-flat-depth": "error",
+        "unicorn/no-manually-wrapped-comments": "error",
+        "unicorn/no-mismatched-map-key": "error",
+        "unicorn/no-misrefactored-assignment": "error",
         "unicorn/no-named-default": "error",
+        "unicorn/no-negated-array-predicate": "error",
+        "unicorn/no-negated-comparison": "error",
         "unicorn/no-negated-condition": "error",
         "unicorn/no-negation-in-equality-check": "error",
         // Already part of core eslint.
         "unicorn/no-nested-ternary": "off",
         "unicorn/no-new-array": "error",
         "unicorn/no-new-buffer": "error",
+        "unicorn/no-non-function-verb-prefix": "error",
+        "unicorn/no-nonstandard-builtin-properties": "error",
         // Null/undefined should do the same, but no need to ban either for now.
         "unicorn/no-null": "off",
         "unicorn/no-object-as-default-parameter": "error",
+        "unicorn/no-object-methods-with-collections": "error",
+        "unicorn/no-optional-chaining-on-undeclared-variable": "error",
         // Exiting with process.exit is fine for now, ignoring.
         "unicorn/no-process-exit": "off",
+        "unicorn/no-redundant-comparison": "error",
+        "unicorn/no-return-array-push": "error",
+        "unicorn/no-selector-as-dom-name": "error",
         "unicorn/no-single-promise-in-promise-methods": "error",
         "unicorn/no-static-only-class": "error",
+        "unicorn/no-subtraction-comparison": "error",
         "unicorn/no-thenable": "error",
         "unicorn/no-this-assignment": "error",
+        // Fairly specific to lint for, then limiting when it's actually needed.
+        "unicorn/no-this-outside-of-class": "off",
+        // Idea is alright for small modules, but not for existing bigger repos.
+        "unicorn/no-top-level-assignment-in-function": "off",
+        "unicorn/no-top-level-side-effects": "error",
         "unicorn/no-typeof-undefined": "error",
+        "unicorn/no-uncalled-method": "error",
+        "unicorn/no-undeclared-class-members": "error",
         "unicorn/no-unnecessary-array-flat-depth": "error",
+        "unicorn/no-unnecessary-array-flat-map": "error",
         "unicorn/no-unnecessary-array-splice-count": "error",
         "unicorn/no-unnecessary-await": "error",
+        "unicorn/no-unnecessary-boolean-comparison": "error",
+        "unicorn/no-unnecessary-fetch-options": "error",
+        "unicorn/no-unnecessary-global-this": "error",
+        "unicorn/no-unnecessary-nested-ternary": "error",
         "unicorn/no-unnecessary-polyfills": "error",
         "unicorn/no-unnecessary-slice-end": "error",
+        "unicorn/no-unnecessary-splice": "error",
         // While readability counts, this syntax does not need a flat out ban.
         "unicorn/no-unreadable-array-destructuring": "off",
+        // Would force a redundant variable to be created outside of the loop.
+        "unicorn/no-unreadable-for-of-expression": "off",
         "unicorn/no-unreadable-iife": "error",
+        // Readability is not a big concern and it saves a redundant variable.
+        "unicorn/no-unreadable-new-expression": "off",
+        "unicorn/no-unreadable-object-destructuring": "error",
+        "unicorn/no-unsafe-buffer-conversion": "error",
+        "unicorn/no-unsafe-dom-html": "error",
+        "unicorn/no-unsafe-promise-all-settled-values": "error",
+        "unicorn/no-unsafe-property-key": "error",
+        // Does not detect valid uses of the $1 templating at all sadly.
+        "unicorn/no-unsafe-string-replacement": "off",
+        "unicorn/no-unused-array-method-return": "error",
         "unicorn/no-unused-properties": "error",
+        "unicorn/no-useless-boolean-cast": "error",
+        "unicorn/no-useless-coercion": "error",
         "unicorn/no-useless-collection-argument": "error",
+        "unicorn/no-useless-compound-assignment": "error",
+        "unicorn/no-useless-concat": "error",
+        "unicorn/no-useless-continue": "error",
+        "unicorn/no-useless-delete-check": "error",
+        "unicorn/no-useless-else": "error",
         "unicorn/no-useless-error-capture-stack-trace": "error",
         "unicorn/no-useless-fallback-in-spread": "error",
+        "unicorn/no-useless-iterator-to-array": "error",
         "unicorn/no-useless-length-check": "error",
+        "unicorn/no-useless-logical-operand": "error",
+        "unicorn/no-useless-override": "error",
         "unicorn/no-useless-promise-resolve-reject": "error",
+        "unicorn/no-useless-recursion": "error",
         "unicorn/no-useless-spread": "error",
         "unicorn/no-useless-switch-case": "error",
+        // Template literals are great for mixed quotes, casting and more.
+        "unicorn/no-useless-template-literals": "off",
         "unicorn/no-useless-undefined": "error",
+        "unicorn/no-xor-as-exponentiation": "error",
         "unicorn/no-zero-fractions": "error",
         "unicorn/number-literal-case": "error",
         // This does very little for readability and can be confusing to some.
         "unicorn/numeric-separators-style": "off",
+        "unicorn/operator-assignment": "error",
+        "unicorn/prefer-abort-signal-any": "error",
+        "unicorn/prefer-abort-signal-timeout": "error",
         "unicorn/prefer-add-event-listener": "error",
+        "unicorn/prefer-add-event-listener-options": "error",
+        "unicorn/prefer-aggregate-error": "error",
         "unicorn/prefer-array-find": "error",
         "unicorn/prefer-array-flat": "error",
         "unicorn/prefer-array-flat-map": "error",
+        "unicorn/prefer-array-from-async": "error",
+        "unicorn/prefer-array-from-map": "error",
+        "unicorn/prefer-array-from-range": "error",
         "unicorn/prefer-array-index-of": "error",
+        "unicorn/prefer-array-iterable-methods": "error",
+        "unicorn/prefer-array-last-methods": "error",
+        "unicorn/prefer-array-slice": "error",
         "unicorn/prefer-array-some": "error",
         "unicorn/prefer-at": "error",
+        // Seems good for new code, but limited usability with existing libs.
+        "unicorn/prefer-await": "off",
         "unicorn/prefer-bigint-literals": "error",
         "unicorn/prefer-blob-reading-methods": "error",
+        "unicorn/prefer-block-statement-over-iife": "error",
+        "unicorn/prefer-boolean-return": "error",
         "unicorn/prefer-class-fields": "error",
         "unicorn/prefer-classlist-toggle": "error",
         "unicorn/prefer-code-point": "error",
+        "unicorn/prefer-continue": "error",
         "unicorn/prefer-date-now": "error",
         "unicorn/prefer-default-parameters": "error",
+        "unicorn/prefer-direct-iteration": "error",
+        "unicorn/prefer-dispose": "error",
         "unicorn/prefer-dom-node-append": "error",
+        "unicorn/prefer-dom-node-html-methods": "error",
         "unicorn/prefer-dom-node-remove": "error",
+        "unicorn/prefer-dom-node-replace-children": "error",
         "unicorn/prefer-dom-node-text-content": "error",
+        "unicorn/prefer-early-return": "error",
+        // Nice in many places, but when it's not, the ignores become excessive.
+        "unicorn/prefer-else-if": "off",
+        "unicorn/prefer-error-is-error": "error",
         // Seems fine to keep using the Node.js version over this for now.
         "unicorn/prefer-event-target": "off",
         "unicorn/prefer-export-from": "error",
+        "unicorn/prefer-flat-math-min-max": "error",
+        "unicorn/prefer-get-or-insert-computed": "error",
+        // Already covered by unicorn/prefer-number-properties.
+        "unicorn/prefer-global-number-constants": "off",
         // Doesn't take into account all cases where replacement isn't possible.
         "unicorn/prefer-global-this": "off",
+        "unicorn/prefer-group-by": "error",
+        "unicorn/prefer-has-check": "error",
+        "unicorn/prefer-hoisting-branch-code": "error",
+        // Would be good if it ignored license headers and other standard texts.
+        "unicorn/prefer-https": "off",
+        "unicorn/prefer-identifier-import-export-specifiers": "error",
         "unicorn/prefer-import-meta-properties": "error",
         "unicorn/prefer-includes": "error",
+        "unicorn/prefer-includes-over-repeated-comparisons": "error",
+        "unicorn/prefer-iterable-in-constructor": "error",
+        "unicorn/prefer-iterator-concat": "error",
+        "unicorn/prefer-iterator-helpers": "error",
+        "unicorn/prefer-iterator-to-array": "error",
+        "unicorn/prefer-iterator-to-array-at-end": "error",
         "unicorn/prefer-keyboard-event-key": "error",
+        "unicorn/prefer-location-assign": "error",
         "unicorn/prefer-logical-operator-over-ternary": "error",
+        "unicorn/prefer-map-from-entries": "error",
+        "unicorn/prefer-math-abs": "error",
+        "unicorn/prefer-math-constants": "error",
         "unicorn/prefer-math-min-max": "error",
         "unicorn/prefer-math-trunc": "error",
+        "unicorn/prefer-minimal-ternary": "error",
         "unicorn/prefer-modern-dom-apis": "error",
         "unicorn/prefer-modern-math-apis": "error",
         "unicorn/prefer-module": "error",
         "unicorn/prefer-native-coercion-functions": "error",
         "unicorn/prefer-negative-index": "error",
         "unicorn/prefer-node-protocol": "error",
-        "unicorn/prefer-number-properties": "error",
+        "unicorn/prefer-number-coercion": "error",
+        "unicorn/prefer-number-is-safe-integer": "error",
+        "unicorn/prefer-number-properties": [
+            "error",
+            {
+                "checkInfinity": true,
+                "checkNaN": true
+            }
+        ],
+        "unicorn/prefer-object-define-properties": "error",
+        "unicorn/prefer-object-destructuring-defaults": "error",
         "unicorn/prefer-object-from-entries": "error",
+        "unicorn/prefer-object-iterable-methods": "error",
+        // There's plenty of cases where the scroll positions are useful.
+        "unicorn/prefer-observer-apis": "off",
         "unicorn/prefer-optional-catch-binding": "error",
+        "unicorn/prefer-path2d": "error",
+        "unicorn/prefer-private-class-fields": "error",
+        "unicorn/prefer-promise-try": "error",
+        "unicorn/prefer-promise-with-resolvers": "error",
         "unicorn/prefer-prototype-methods": "error",
         // Query selector is much slower than any other selector.
         "unicorn/prefer-query-selector": "off",
+        "unicorn/prefer-queue-microtask": "error",
         "unicorn/prefer-reflect-apply": "error",
+        "unicorn/prefer-regexp-escape": "error",
         "unicorn/prefer-regexp-test": "error",
         "unicorn/prefer-response-static-json": "error",
+        "unicorn/prefer-scoped-selector": "error",
         "unicorn/prefer-set-has": "error",
+        "unicorn/prefer-set-methods": "error",
         "unicorn/prefer-set-size": "error",
+        "unicorn/prefer-short-arrow-method": "error",
+        "unicorn/prefer-simple-condition-first": "error",
+        "unicorn/prefer-simple-sort-comparator": "error",
+        "unicorn/prefer-simplified-conditions": "error",
+        "unicorn/prefer-single-array-predicate": "error",
         "unicorn/prefer-single-call": "error",
+        "unicorn/prefer-single-object-destructuring": "error",
+        "unicorn/prefer-single-replace": "error",
+        "unicorn/prefer-smaller-scope": "error",
+        "unicorn/prefer-split-limit": "error",
         "unicorn/prefer-spread": "error",
+        "unicorn/prefer-string-match-all": "error",
+        "unicorn/prefer-string-pad-start-end": "error",
         "unicorn/prefer-string-raw": "error",
+        "unicorn/prefer-string-repeat": "error",
         // Also wants to use replaceAll with regex, confusing and redundant.
         "unicorn/prefer-string-replace-all": "off",
         "unicorn/prefer-string-slice": "error",
@@ -968,17 +1163,32 @@ export default defineConfig([{
         "unicorn/prefer-structured-clone": "off",
         // Switches are not readable, end of story.
         "unicorn/prefer-switch": "off",
+        // Temporal is nice, but Date is also okay for now in existing code.
+        "unicorn/prefer-temporal": "off",
         // Leaving it off for now as ternaries are disabled.
         "unicorn/prefer-ternary": "off",
+        "unicorn/prefer-toggle-attribute": "error",
         "unicorn/prefer-top-level-await": "error",
         "unicorn/prefer-type-error": "error",
+        "unicorn/prefer-type-literal-last": "error",
+        "unicorn/prefer-uint8array-base64": "error",
+        "unicorn/prefer-unary-minus": "error",
         "unicorn/prefer-unicode-code-point-escapes": "error",
+        "unicorn/prefer-url-can-parse": "error",
+        "unicorn/prefer-url-href": "error",
+        "unicorn/prefer-url-search-parameters": "error",
+        "unicorn/prefer-while-loop-condition": "error",
         "unicorn/relative-url-style": "error",
         "unicorn/require-array-join-separator": "error",
+        // Seems excessive and covered by types for the most part.
+        "unicorn/require-array-sort-compare": "off",
+        "unicorn/require-css-escape": "error",
         "unicorn/require-module-attributes": "error",
         "unicorn/require-module-specifiers": "error",
         "unicorn/require-number-to-fixed-digits-argument": "error",
+        "unicorn/require-passive-events": "error",
         "unicorn/require-post-message-target-origin": "error",
+        "unicorn/require-proxy-trap-boolean-return": "error",
         "unicorn/string-content": [
             "error",
             {
@@ -989,9 +1199,12 @@ export default defineConfig([{
             }
         ],
         "unicorn/switch-case-braces": "error",
+        "unicorn/switch-case-break-position": "error",
         "unicorn/template-indent": "error",
         "unicorn/text-encoding-identifier-case": "error",
         "unicorn/throw-new-error": "error",
+        // Seems like a lot of work for now, but might be enabled in the future.
+        "unicorn/try-complexity": "off",
         "use-isnan": "error",
         "valid-typeof": "error",
         "vars-on-top": "error",
@@ -1019,7 +1232,7 @@ export default defineConfig([{
         "json/no-empty-keys": "error",
         "json/no-unnormalized-keys": "error",
         "json/no-unsafe-values": "error",
-        // Also implemented by jsonc
+        // Also implemented by jsonc.
         "json/sort-keys": "off",
         "json/top-level-interop": "error",
         "jsonc/array-bracket-newline": "error",
@@ -1097,7 +1310,7 @@ export default defineConfig([{
         "package-json/no-redundant-files": "error",
         "package-json/no-redundant-publishConfig": "error",
         "package-json/order-properties": "error",
-        // Shorthand isn't good, but plain urls are reported as such by this
+        // Shorthand isn't good, but plain urls are reported as such by this.
         "package-json/repository-shorthand": "off",
         "package-json/require-attribution": "error",
         "package-json/require-author": "error",
