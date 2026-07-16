@@ -941,6 +941,8 @@ export default defineConfig([{
         "unicorn/no-manually-wrapped-comments": "error",
         "unicorn/no-mismatched-map-key": "error",
         "unicorn/no-misrefactored-assignment": "error",
+        "unicorn/no-missing-local-resource": "error",
+        "unicorn/no-multiple-promise-resolver-calls": "error",
         "unicorn/no-named-default": "error",
         "unicorn/no-negated-array-predicate": "error",
         "unicorn/no-negated-comparison": "error",
@@ -962,6 +964,8 @@ export default defineConfig([{
         "unicorn/no-redundant-comparison": "error",
         "unicorn/no-return-array-push": "error",
         "unicorn/no-selector-as-dom-name": "error",
+        // This is a CSS rule, maybe in the future.
+        "unicorn/no-shorthand-property-overrides": "off",
         "unicorn/no-single-promise-in-promise-methods": "error",
         "unicorn/no-static-only-class": "error",
         "unicorn/no-subtraction-comparison": "error",
@@ -972,6 +976,8 @@ export default defineConfig([{
         // Idea is alright for small modules, but not for existing bigger repos.
         "unicorn/no-top-level-assignment-in-function": "off",
         "unicorn/no-top-level-side-effects": "error",
+        // This is a CSS rule, maybe in the future.
+        "unicorn/no-transition-all": "off",
         "unicorn/no-typeof-undefined": "error",
         "unicorn/no-uncalled-method": "error",
         "unicorn/no-undeclared-class-members": "error",
@@ -986,6 +992,7 @@ export default defineConfig([{
         "unicorn/no-unnecessary-polyfills": "error",
         "unicorn/no-unnecessary-slice-end": "error",
         "unicorn/no-unnecessary-splice": "error",
+        "unicorn/no-unnecessary-string-trim": "error",
         // While readability counts, this syntax does not need a flat out ban.
         "unicorn/no-unreadable-array-destructuring": "off",
         // Would force a redundant variable to be created outside of the loop.
@@ -1017,6 +1024,7 @@ export default defineConfig([{
         "unicorn/no-useless-logical-operand": "error",
         "unicorn/no-useless-override": "error",
         "unicorn/no-useless-promise-resolve-reject": "error",
+        "unicorn/no-useless-re-export": "error",
         "unicorn/no-useless-recursion": "error",
         "unicorn/no-useless-spread": "error",
         "unicorn/no-useless-switch-case": "error",
@@ -1071,6 +1079,8 @@ export default defineConfig([{
         "unicorn/prefer-error-is-error": "error",
         // Seems fine to keep using the Node.js version over this for now.
         "unicorn/prefer-event-target": "off",
+        // This is a CSS rule, maybe in the future.
+        "unicorn/prefer-explicit-viewport-units": "off",
         "unicorn/prefer-export-from": "error",
         "unicorn/prefer-flat-math-min-max": "error",
         "unicorn/prefer-get-or-insert-computed": "error",
@@ -1088,7 +1098,8 @@ export default defineConfig([{
         "unicorn/prefer-includes": "error",
         "unicorn/prefer-includes-over-repeated-comparisons": "error",
         "unicorn/prefer-iterable-in-constructor": "error",
-        "unicorn/prefer-iterator-concat": "error",
+        // Completely breaks concatting via spreading operator during autofixes.
+        "unicorn/prefer-iterator-concat": "off",
         "unicorn/prefer-iterator-helpers": "error",
         "unicorn/prefer-iterator-to-array": "error",
         "unicorn/prefer-iterator-to-array-at-end": "error",
@@ -1140,7 +1151,8 @@ export default defineConfig([{
         "unicorn/prefer-set-methods": "error",
         "unicorn/prefer-set-size": "error",
         "unicorn/prefer-short-arrow-method": "error",
-        "unicorn/prefer-simple-condition-first": "error",
+        // Idea is good, but there are so many edge cases where this isn't nice.
+        "unicorn/prefer-simple-condition-first": "off",
         "unicorn/prefer-simple-sort-comparator": "error",
         "unicorn/prefer-simplified-conditions": "error",
         "unicorn/prefer-single-array-predicate": "error",
@@ -1167,6 +1179,7 @@ export default defineConfig([{
         "unicorn/prefer-temporal": "off",
         // Leaving it off for now as ternaries are disabled.
         "unicorn/prefer-ternary": "off",
+        "unicorn/prefer-then-catch": "error",
         "unicorn/prefer-toggle-attribute": "error",
         "unicorn/prefer-top-level-await": "error",
         "unicorn/prefer-type-error": "error",
@@ -1183,6 +1196,8 @@ export default defineConfig([{
         // Seems excessive and covered by types for the most part.
         "unicorn/require-array-sort-compare": "off",
         "unicorn/require-css-escape": "error",
+        // This is a YAML rule, no need as YAML should not be used ever.
+        "unicorn/require-frontmatter-fields": "off",
         "unicorn/require-module-attributes": "error",
         "unicorn/require-module-specifiers": "error",
         "unicorn/require-number-to-fixed-digits-argument": "error",
